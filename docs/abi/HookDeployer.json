@@ -1,0 +1,182 @@
+[
+  {
+    "type": "function",
+    "name": "deploy",
+    "inputs": [
+      {
+        "name": "salt",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "config",
+        "type": "tuple",
+        "internalType": "struct UnlkHook.Config",
+        "components": [
+          {
+            "name": "manager",
+            "type": "address",
+            "internalType": "contract IPoolManager"
+          },
+          {
+            "name": "token",
+            "type": "address",
+            "internalType": "contract UnlkToken"
+          },
+          {
+            "name": "quoteToken",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "launchFactory",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "router",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "liquidityLock",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "rewards",
+            "type": "address",
+            "internalType": "contract IClaimEvidence"
+          },
+          {
+            "name": "oracle",
+            "type": "address",
+            "internalType": "contract UnlkOracle"
+          },
+          {
+            "name": "tickSpacing",
+            "type": "int24",
+            "internalType": "int24"
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "hook",
+        "type": "address",
+        "internalType": "contract UnlkHook"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "initCodeHash",
+    "inputs": [
+      {
+        "name": "config",
+        "type": "tuple",
+        "internalType": "struct UnlkHook.Config",
+        "components": [
+          {
+            "name": "manager",
+            "type": "address",
+            "internalType": "contract IPoolManager"
+          },
+          {
+            "name": "token",
+            "type": "address",
+            "internalType": "contract UnlkToken"
+          },
+          {
+            "name": "quoteToken",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "launchFactory",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "router",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "liquidityLock",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "rewards",
+            "type": "address",
+            "internalType": "contract IClaimEvidence"
+          },
+          {
+            "name": "oracle",
+            "type": "address",
+            "internalType": "contract UnlkOracle"
+          },
+          {
+            "name": "tickSpacing",
+            "type": "int24",
+            "internalType": "int24"
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "predict",
+    "inputs": [
+      {
+        "name": "salt",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "codeHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "event",
+    "name": "HookCreated",
+    "inputs": [
+      {
+        "name": "hook",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "salt",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  }
+]

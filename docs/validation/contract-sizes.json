@@ -1,0 +1,26 @@
+{
+  "UnlkToken": {
+    "initcodeBytes": 3257,
+    "runtimeBytes": 2016
+  },
+  "UnlkHook": {
+    "initcodeBytes": 14639,
+    "runtimeBytes": 12985
+  },
+  "UnlkOracle": {
+    "initcodeBytes": 8256,
+    "runtimeBytes": 7640
+  },
+  "UnlkSwapRouter": {
+    "initcodeBytes": 8664,
+    "runtimeBytes": 8337
+  },
+  "UnlkLiquidityLock": {
+    "initcodeBytes": 8175,
+    "runtimeBytes": 7696
+  },
+  "HookDeployer": {
+    "initcodeBytes": 15667,
+    "runtimeBytes": 15639
+  }
+}

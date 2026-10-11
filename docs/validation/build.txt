@@ -1,0 +1,3 @@
+Compiling 101 files with Solc 0.8.26
+Solc 0.8.26 finished in 10.19s
+Compiler run successful!
