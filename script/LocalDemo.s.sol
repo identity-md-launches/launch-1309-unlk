@@ -5,16 +5,22 @@ import {SystemFixture} from "../test/fixtures/SystemFixture.sol";
 /// @notice LOCAL simulation harness. It is not a contract intended for deployment.
 contract LocalSystem is SystemFixture {
     event LocalSystemCreated(
-        address manager, address token, address hook, address router, address vault, address oracle
+        address manager, address token, address hook, address router, address factory, address oracle
     );
     function setUp() public override {}
 
     function initializeLocal() external {
         require(block.chainid == 31337, "local chain only");
         _deploy(false);
-        _initialize(-175000);
+        _launchTokenOnly(OPENING_TICK);
+        _localQuoteDepth(10000 ether);
         emit LocalSystemCreated(
-            address(manager), address(token), address(hook), address(router), address(vault), address(oracle)
+            address(manager),
+            address(token),
+            address(hook),
+            address(router),
+            address(factory),
+            address(oracle)
         );
     }
 

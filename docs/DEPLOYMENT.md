@@ -8,11 +8,13 @@ No contract obtains a launch owner implicitly from `msg.sender` or `tx.origin`. 
 
 | Contract | Constructor parameters | One-time operation |
 | --- | --- | --- |
-| Token | Actual swarm distributor, permanent pool vault, actual paying wallet | None; all 1 billion tokens mint once in the constructor |
-| Router | Canonical PoolManager, explicit setup authority | Authority calls `configureHook(hook)` once; verifies reciprocal router/manager references |
-| Lock | Canonical PoolManager, explicit setup authority, actual launch factory, reviewed official fee-distribution boundary | Authority calls `configureHook(hook)` once; checks reciprocal lock/manager and payer references |
-| Oracle | Canonical PoolManager, verified Chainlink ETH/USD feed, UNLK, quote denomination, explicit setup authority, feed freshness limit, active-liquidity floor | Authority calls `configureHook(hook)` once. Hook then binds PoolKey once and locks the initial liquidity range |
-| Hook | One tuple: manager, token, quote denomination, launch factory, supported router, liquidity lock, reviewed claim evidence, oracle, tick spacing | No admin setter; authorized factory binds the official pool through `beforeInitialize` |
+| Token | None (manifest `univ4_hook` token args are empty); mints the whole supply to the factory | None |
+| Router | Canonical PoolManager, explicit setup authority | Authority calls `configureHook(predictedHook)` once before the launch; the hook verifies `router.hook()` at bind |
+| Claim adapter (`MerkleClaimEvidence`) | Predicted distributor, predicted token | None; immutable |
+| Oracle | Canonical PoolManager, verified Chainlink ETH/USD feed, predicted token, quote currency (address(0) for native ETH), explicit setup authority, feed freshness limit, active-liquidity floor | Authority calls `configureHook(predictedHook)` once before the launch; the hook verifies `oracle.hook()` at bind |
+| Hook | 8 flat words in manifest order: `$poolManager`, `$token`, `$factory`, `$owner`, router, claim adapter, oracle, tick spacing (60) | No admin setter; the factory binds the official pool through `beforeInitialize` in `launch()` |
+
+`$owner` must be the wallet `economics.remainderTo` names: it receives the 3% and is the wallet `syncPayer()` credits.
 
 `quoteToken = address(0)` means Uniswap's **native ETH currency encoding**, not a missing-address placeholder. Any nonzero quote must be the verified chain WETH with 18 decimals; arbitrary dollar/staked/rebasing tokens are invalid economic configurations. Every other required address must be real and nonzero. The constructor permits deferred code deployment, but this is not validation that an address is correct.
 
@@ -26,7 +28,16 @@ The read-only `CheckReleaseConfig` can be run on an explicitly supplied, pinned 
 
 No fork URL, approved chain-address table or existing deployment was supplied for this run; therefore no public-chain fork result is claimed.
 
-## Order and hook address mining
+## Order with the verified IMD factory
+
+1. Obtain the chain's factory, fees, PoolManager, Chainlink ETH/USD and WETH (if used) from the network configuration. Compute `predictedToken = factory.predictToken(launchNumber, type(UnlkToken).creationCode)`.
+2. Confirm `factory.distributorCreationCodeHash()` equals `keccak256(type(MerkleDistributor).creationCode)` compiled from `test/imd/MerkleDistributor.sol` with this toolchain, then predict the distributor (`SystemFixture._predictDistributor` shows the exact formula; `sweepDelaySeconds` comes from the deployer). If the hash differs, obtain the distributor address from an `eth_call` simulation of `launch()`.
+3. Deploy the router, the claim adapter and the oracle with the predicted addresses. Deploy nothing that needs a key in this job.
+4. Build the hook init code with `HookDeployer.initCode(config)`, mine the salt against `factory.predictHook(initCode, salt)` for flags `0x3fc0`, and configure the router and oracle with the predicted hook.
+5. Hand the manifest fields to the launch task: hook args as above, token args empty, pool fee 12500, tick spacing 60, token-only opening range on the token side of the price, `poolBps` 8700.
+6. The launch task's `launch()` does the rest atomically. A mismatch in any companion reverts the launch without deploying anything.
+
+## Order and hook address mining (local deployer, tests only)
 
 1. Resolve the IMD manifest/deployment compatibility gaps in `IMD_INTEGRATION.md`. Verify factory ownership of initialization and the native token-only opening curve. Plan all companion addresses and explicit setup authority without live keys in this source project.
 2. Deploy/configure reviewed native reward and fee boundaries according to their real APIs. Deploy the router and permanent vault with explicit authority and factory arguments. Mint the fixed-supply token to the actual distributor/vault/payer. This constructor pattern must first be reconciled with IMD's token deployment schema.

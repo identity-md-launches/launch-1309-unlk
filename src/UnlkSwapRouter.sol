@@ -61,10 +61,9 @@ contract UnlkSwapRouter is IUnlockCallback, ReentrancyGuard {
 
     function configureHook(IUnlkHookView hook_) external {
         if (msg.sender != setupAuthority || address(hook) != address(0)) revert Unauthorized();
-        if (
-            address(hook_) == address(0) || hook_.router() != address(this)
-                || address(hook_.poolManager()) != address(poolManager)
-        ) revert InvalidConfig();
+        // Predicted CREATE2 address: the factory deploys the hook later in its launch transaction, and the
+        // hook verifies `router.hook() == this` before binding the pool. Reads fail closed until then.
+        if (address(hook_) == address(0)) revert InvalidConfig();
         hook = hook_;
         emit HookConfigured(address(hook_));
     }

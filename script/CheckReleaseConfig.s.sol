@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 import {UnlkHook} from "../src/UnlkHook.sol";
-import {UnlkLiquidityLock} from "../src/UnlkLiquidityLock.sol";
+import {IMerkleDistributor} from "../src/interfaces/IIntegration.sol";
 import {UnlkSwapRouter} from "../src/UnlkSwapRouter.sol";
 import {UnlkOracle} from "../src/UnlkOracle.sol";
 import {UnlkToken} from "../src/UnlkToken.sol";
@@ -39,23 +39,22 @@ contract CheckReleaseConfig {
         liquidity = _checkLiquidity(hook, id);
         UnlkToken token = hook.token();
         require(token.totalSupply() == 1_000_000_000 ether, "supply mismatch");
+        address swarm = hook.rewards().distributor();
         require(
-            hook.rewards().distributor() == token.swarm() && hook.rewards().token() == address(token),
+            swarm == hook.swarm() && hook.rewards().token() == address(token)
+                && IMerkleDistributor(swarm).token() == address(token)
+                && IMerkleDistributor(swarm).opener() == hook.launchFactory(),
             "claim source mismatch"
         );
         (, pendingPayer) = hook.pendingPayerCredit();
     }
 
+    /// @dev The factory keeps the seeded position; its range is the oracle's recorded liquidity range.
     function _checkLiquidity(UnlkHook hook, PoolId id) private view returns (uint128 liquidity) {
-        UnlkLiquidityLock vault = UnlkLiquidityLock(hook.liquidityLock());
         UnlkSwapRouter router = UnlkSwapRouter(payable(hook.router()));
-        require(
-            address(vault.hook()) == address(hook) && address(router.hook()) == address(hook),
-            "route/vault mismatch"
-        );
-        require(vault.seeded(), "principal not seeded");
-        (liquidity,,) =
-            hook.poolManager().getPositionInfo(id, address(vault), vault.tickLower(), vault.tickUpper(), 0);
-        require(liquidity == vault.lockedLiquidity() && liquidity != 0, "principal mismatch");
+        require(address(router.hook()) == address(hook), "route mismatch");
+        (int24 lower, int24 upper) = hook.oracle().liquidityRangeTicks();
+        (liquidity,,) = hook.poolManager().getPositionInfo(id, hook.launchFactory(), lower, upper, 0);
+        require(liquidity != 0, "principal not seeded");
     }
 }

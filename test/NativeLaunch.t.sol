@@ -22,9 +22,9 @@ contract NativeLaunchTest is SystemFixture {
         _deploy(false);
         uint160 upper = TickMath.getSqrtPriceAtTick(NATIVE_UPPER);
         uint160 lower = TickMath.getSqrtPriceAtTick(NATIVE_LOWER);
-        factory.initialize(manager, key, upper);
-        uint128 liquidity = uint128(Math.mulDiv(token.POOL_ALLOCATION(), 1 << 96, upper - lower));
-        factory.seedNative(vault, liquidity, NATIVE_LOWER, NATIVE_UPPER);
+        uint128 liquidity = uint128(Math.mulDiv(870_000_000 ether, 1 << 96, upper - lower));
+        (seedLower, seedUpper, seedLiquidity) = (NATIVE_LOWER, NATIVE_UPPER, liquidity);
+        _launch(upper, NATIVE_LOWER, NATIVE_UPPER, liquidity);
         vm.deal(alice, 100 ether);
         vm.deal(bob, 100 ether);
     }
@@ -35,10 +35,11 @@ contract NativeLaunchTest is SystemFixture {
     }
 
     function testOneSidedOpeningLocks87PercentWithoutEthFunding() public view {
-        assertEq(vault.initialQuoteUsed(), 0);
-        assertEq(address(vault).balance, 0);
-        assertApproxEqAbs(vault.initialTokenUsed(), token.POOL_ALLOCATION(), 1e9);
+        assertEq(address(factory).balance, 0);
+        assertApproxEqAbs(token.balanceOf(address(manager)), token.POOL_ALLOCATION(), 1e9);
+        assertEq(token.balanceOf(address(factory)), 0);
         assertEq(address(manager).balance, 0);
+        assertEq(_factoryLiquidity(NATIVE_LOWER, NATIVE_UPPER), seedLiquidity);
     }
 
     function testNativeBuySellAndFeeDistribution() public {
@@ -53,11 +54,12 @@ contract NativeLaunchTest is SystemFixture {
         router.withdrawNative();
         assertEq(alice.balance - nativeBefore, output);
         assertEq(address(router).balance, 0);
-        (uint256 f0,) = vault.collectFees();
-        assertEq(fees.nativeClaim(payer), f0 * 4 / 5);
-        assertEq(fees.nativeClaim(imd), f0 - f0 * 4 / 5);
-        vm.prank(payer);
-        fees.withdrawNative();
+        uint256 payerEth = payer.balance;
+        uint256 imdEth = imd.balance;
+        (uint256 f0,) = factory.claimFees(LAUNCH_NUMBER);
+        assertEq(payer.balance - payerEth, f0 * 8000 / 10000);
+        assertEq(imd.balance - imdEth, f0 - f0 * 8000 / 10000);
+        assertEq(address(factory).balance, 0);
         assertEq(payer.balance, f0 * 4 / 5);
     }
 

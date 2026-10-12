@@ -5,7 +5,9 @@ import {Test} from "forge-std/Test.sol";
 import {UnlkHook} from "../src/UnlkHook.sol";
 import {UnlkToken} from "../src/UnlkToken.sol";
 import {UnlkSwapRouter} from "../src/UnlkSwapRouter.sol";
-import {MockWETH, MockRewards, MockEthUsd} from "./fixtures/LocalFixtures.sol";
+import {MockWETH, MockEthUsd} from "./fixtures/LocalFixtures.sol";
+import {MerkleClaimEvidence} from "../src/MerkleClaimEvidence.sol";
+import {MerkleDistributor} from "./imd/MerkleDistributor.sol";
 import {TickMath} from "v4-core/src/libraries/TickMath.sol";
 import {IPoolManager} from "v4-core/src/interfaces/IPoolManager.sol";
 import {StateLibrary} from "v4-core/src/libraries/StateLibrary.sol";
@@ -15,7 +17,9 @@ contract ActionHandler is Test {
     UnlkToken public immutable token;
     UnlkSwapRouter public immutable router;
     MockWETH public immutable weth;
-    MockRewards public immutable rewards;
+    MerkleClaimEvidence public immutable rewards;
+    MerkleDistributor public immutable distributor;
+    uint64 public immutable unlocksAt;
     MockEthUsd public immutable feed;
     address[3] public actors;
     bool immutable tokenIs0;
@@ -32,7 +36,8 @@ contract ActionHandler is Test {
         UnlkToken t,
         UnlkSwapRouter r,
         MockWETH w,
-        MockRewards d,
+        MerkleClaimEvidence d,
+        MerkleDistributor md,
         MockEthUsd f,
         address a,
         address b,
@@ -43,6 +48,8 @@ contract ActionHandler is Test {
         router = r;
         weth = w;
         rewards = d;
+        distributor = md;
+        unlocksAt = md.roundOf(0).unlocksAt;
         feed = f;
         actors = [a, b, payer];
         tokenIs0 = address(t) < address(w);
@@ -95,8 +102,9 @@ contract ActionHandler is Test {
     }
 
     function claim() external {
-        if (block.timestamp < rewards.releaseTime()) return;
-        try rewards.claim(0, actors[0], 1_000_000 ether, new bytes32[](0)) {} catch {}
+        if (block.timestamp < unlocksAt) return;
+        try distributor.claim(0, actors[0], 1_000_000 ether, new bytes32[](0)) {} catch {}
+        try rewards.attest(0, actors[0], 1_000_000 ether, new bytes32[](0)) {} catch {}
     }
 
     function advance(uint16 secondsSeed) external {
@@ -136,7 +144,7 @@ contract SystemInvariantTest is SystemFixture {
         super.setUp();
         // Make native claims reachable from the first generated action, rather than relying on rare long sequences.
         _advance(1 hours);
-        handler = new ActionHandler(hook, token, router, weth, rewards, feed, alice, bob, payer);
+        handler = new ActionHandler(hook, token, router, weth, rewards, distributor, feed, alice, bob, payer);
         targetContract(address(handler));
         bytes4[] memory selectors = new bytes4[](6);
         selectors[0] = ActionHandler.buy.selector;
@@ -168,9 +176,10 @@ contract SystemInvariantTest is SystemFixture {
     }
 
     function invariantSupplyConservedAndRouterHasNoCustody() public view {
+        address warmUpBuyer = address(uint160(uint256(keccak256("local warm-up buyer"))));
         uint256 total = token.balanceOf(alice) + token.balanceOf(bob) + token.balanceOf(payer)
-            + token.balanceOf(address(manager)) + token.balanceOf(address(vault))
-            + token.balanceOf(address(rewards));
+            + token.balanceOf(address(manager)) + token.balanceOf(address(factory))
+            + token.balanceOf(address(distributor)) + token.balanceOf(warmUpBuyer);
         assertEq(total, token.totalSupply());
         assertEq(total, 1_000_000_000 ether);
         assertEq(token.balanceOf(address(router)), 0);
@@ -181,17 +190,17 @@ contract SystemInvariantTest is SystemFixture {
     }
 
     function invariantPrincipalLiquidityNeverDecreases() public view {
-        (uint128 liquidity,,) = IPoolManager(address(manager))
-            .getPositionInfo(hook.poolId(), address(vault), LOWER, UPPER, bytes32(0));
-        assertEq(liquidity, vault.lockedLiquidity());
-        assertEq(hook.eligible(address(vault)), 0);
-        assertEq(hook.sold(address(vault)), 0);
+        assertEq(_factoryLiquidity(seedLower, seedUpper), seedLiquidity);
+        assertEq(token.balanceOf(address(factory)), 0);
+        assertEq(hook.eligible(address(factory)), 0);
+        assertEq(hook.sold(address(factory)), 0);
     }
 }
 
 contract FullyUnlockedInvariantTest is SystemInvariantTest {
     function setUp() public override {
         super.setUp();
+        _localWarmUpBuy(12 ether);
         feed.set(300000e8);
         _confirm();
         assertTrue(hook.fullyUnlocked());

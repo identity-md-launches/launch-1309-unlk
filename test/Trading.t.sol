@@ -270,7 +270,8 @@ contract TradingTest is SystemFixture {
 contract Token0TradingTest is TradingTest {
     function setUp() public override {
         _deploy(true);
-        _initialize(-175000);
+        _launchTokenOnly(OPENING_TICK);
+        _localQuoteDepth(10000 ether);
         assertTrue(tokenIs0);
     }
 }

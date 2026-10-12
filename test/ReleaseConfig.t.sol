@@ -10,7 +10,7 @@ contract ReleaseConfigTest is SystemFixture {
         (PoolId id, uint128 liquidity, uint256 pending) =
             checker.run(hook, block.chainid, address(manager).codehash, address(feed).codehash);
         assertEq(PoolId.unwrap(id), PoolId.unwrap(hook.poolId()));
-        assertEq(liquidity, vault.lockedLiquidity());
+        assertEq(liquidity, seedLiquidity);
         assertEq(pending, 30_000_000 ether);
     }
 

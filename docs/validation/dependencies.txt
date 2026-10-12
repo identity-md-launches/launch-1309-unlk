@@ -1,0 +1,1 @@
+Verified 407 vendored files: 230 byte-identical to upstream, 159 forge-fmt formatted with an identical upstream token stream, 18 reproduced by forge fmt from embedded pinned upstream bytes

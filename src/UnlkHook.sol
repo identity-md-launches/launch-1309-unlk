@@ -13,10 +13,19 @@ import {StateLibrary} from "v4-core/src/libraries/StateLibrary.sol";
 import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 import {UnlkToken} from "./UnlkToken.sol";
 import {UnlkOracle} from "./UnlkOracle.sol";
-import {IClaimEvidence, IRouteContext} from "./interfaces/IIntegration.sol";
+import {
+    IClaimEvidence,
+    IRouteContext,
+    IMerkleDistributor,
+    IUnlkCompanion
+} from "./interfaces/IIntegration.sol";
 import {OperationHash} from "./libraries/OperationHash.sol";
 
 /// @notice Immutable quota hook. The integration contracts are security boundaries, not admin privileges.
+/// @dev Deployed by IMD's `LaunchFactory` through CREATE2 in the launch transaction, with the flat constructor
+/// words the manifest's `hook.constructorArgs` lists: `$poolManager`, `$token`, `$factory`, `$owner`, then the
+/// pre-deployed router, claim adapter and oracle, then the tick spacing. The factory keeps the seeded liquidity,
+/// so it is the only liquidity sender this hook accepts, and it can never remove principal (zero deltas only).
 contract UnlkHook is IHooks {
     using PoolIdLibrary for PoolKey;
     using StateLibrary for IPoolManager;
@@ -27,14 +36,18 @@ contract UnlkHook is IHooks {
     uint256 public constant MAX_CONFIRMATION_GAP = 5 minutes;
     IPoolManager public immutable poolManager;
     UnlkToken public immutable token;
-    address public immutable quoteToken;
     address public immutable launchFactory;
+    /// @notice The launch owner: the wallet the factory's `remainderTo` pays the 3% allocation to.
+    address public immutable payer;
     address public immutable router;
-    address public immutable liquidityLock;
     IClaimEvidence public immutable rewards;
     UnlkOracle public immutable oracle;
     int24 public immutable tickSpacing;
 
+    /// @notice Paired currency, fixed when the factory binds the pool (address(0) is native ETH).
+    address public quoteToken;
+    /// @notice The contributor distributor the factory created for this launch, fixed at bind.
+    address public swarm;
     PoolKey private _key;
     PoolId public poolId;
     bool public bound;
@@ -50,13 +63,13 @@ contract UnlkHook is IHooks {
     bytes32 private pendingOperation;
     address private pendingTrader;
 
+    /// @dev Off-chain grouping of the flat constructor words; `HookDeployer` encodes it in constructor order.
     struct Config {
         IPoolManager manager;
         UnlkToken token;
-        address quoteToken;
         address launchFactory;
+        address payer;
         address router;
-        address liquidityLock;
         IClaimEvidence rewards;
         UnlkOracle oracle;
         int24 tickSpacing;
@@ -74,22 +87,32 @@ contract UnlkHook is IHooks {
     event Sale(address indexed trader, uint256 amount);
     event Milestone(uint8 tier, uint16 p, bool fullyUnlocked, uint256 fdvUsd);
 
-    constructor(Config memory c) {
+    /// @dev No external call and no code requirement: the launch checks run this constructor on an empty chain,
+    /// and the factory deploys the token immediately before the hook in the same transaction.
+    constructor(
+        IPoolManager manager_,
+        UnlkToken token_,
+        address launchFactory_,
+        address payer_,
+        address router_,
+        IClaimEvidence rewards_,
+        UnlkOracle oracle_,
+        int24 tickSpacing_
+    ) {
         if (
-            address(c.manager) == address(0) || address(c.token) == address(0)
-                || c.quoteToken == address(c.token) || c.launchFactory == address(0) || c.router == address(0)
-                || c.liquidityLock == address(0) || address(c.rewards) == address(0)
-                || address(c.oracle) == address(0) || c.tickSpacing <= 0 || c.tickSpacing > 32767
+            address(manager_) == address(0) || address(token_) == address(0) || launchFactory_ == address(0)
+                || payer_ == address(0) || router_ == address(0) || address(rewards_) == address(0)
+                || address(oracle_) == address(0) || tickSpacing_ <= 0 || tickSpacing_ > 32767
+                || payer_ == launchFactory_
         ) revert InvalidConfig();
-        poolManager = c.manager;
-        token = c.token;
-        quoteToken = c.quoteToken;
-        launchFactory = c.launchFactory;
-        router = c.router;
-        liquidityLock = c.liquidityLock;
-        rewards = c.rewards;
-        oracle = c.oracle;
-        tickSpacing = c.tickSpacing;
+        poolManager = manager_;
+        token = token_;
+        launchFactory = launchFactory_;
+        payer = payer_;
+        router = router_;
+        rewards = rewards_;
+        oracle = oracle_;
+        tickSpacing = tickSpacing_;
         Hooks.validateHookPermissions(this, getHookPermissions());
     }
 
@@ -123,14 +146,26 @@ contract UnlkHook is IHooks {
         address c1 = Currency.unwrap(key.currency1);
         if (
             bound || address(key.hooks) != address(this) || key.fee != FEE || key.tickSpacing != tickSpacing
-                || !((c0 == address(token) && c1 == quoteToken) || (c1 == address(token) && c0 == quoteToken))
+                || !(c0 == address(token) || c1 == address(token))
         ) revert InvalidPool();
+        address quote = c0 == address(token) ? c1 : c0;
+        // Companions were configured with this predicted address before the launch; verify reciprocity now.
         if (
-            token.poolVault() != liquidityLock || rewards.token() != address(token)
-                || rewards.distributor() != token.swarm()
-                || address(oracle.poolManager()) != address(poolManager) || oracle.token() != address(token)
-                || oracle.quoteToken() != quoteToken || oracle.hook() != address(this)
+            address(oracle.poolManager()) != address(poolManager) || oracle.token() != address(token)
+                || oracle.quoteToken() != quote || oracle.hook() != address(this)
+                || IUnlkCompanion(router).hook() != address(this) || rewards.token() != address(token)
         ) revert InvalidConfig();
+        // The factory has already created and funded the contributor distributor for this exact token: the
+        // whole supply was minted to the factory, so a distributor opened by it and holding the 10% is the one.
+        address distributor = rewards.distributor();
+        if (
+            IMerkleDistributor(distributor).token() != address(token)
+                || IMerkleDistributor(distributor).opener() != launchFactory
+                || token.balanceOf(distributor) != token.SWARM_ALLOCATION()
+                || token.balanceOf(launchFactory) != token.SUPPLY() - token.SWARM_ALLOCATION()
+        ) revert InvalidEvidence();
+        quoteToken = quote;
+        swarm = distributor;
         bound = true;
         _key = key;
         poolId = key.toId();
@@ -210,8 +245,8 @@ contract UnlkHook is IHooks {
         bytes calldata
     ) external onlyManager returns (bytes4) {
         _checkPool(key);
-        // All official-pool liquidity belongs to this non-withdrawable vault. No JIT fee diversion.
-        if (sender != liquidityLock) revert Unauthorized();
+        // All official-pool liquidity is the factory's seed; it has no removal path. No JIT fee diversion.
+        if (sender != launchFactory) revert Unauthorized();
         if (oracle.rangeUpper() == 0) oracle.setLiquidityRange(params.tickLower, params.tickUpper);
         oracle.checkpoint();
         return IHooks.beforeAddLiquidity.selector;
@@ -237,7 +272,7 @@ contract UnlkHook is IHooks {
         bytes calldata
     ) external onlyManager returns (bytes4) {
         _checkPool(key);
-        if (sender != liquidityLock) revert Unauthorized();
+        if (sender != launchFactory) revert Unauthorized();
         if (params.liquidityDelta != 0) revert PrincipalLocked();
         oracle.checkpoint();
         return IHooks.beforeRemoveLiquidity.selector;
@@ -275,18 +310,19 @@ contract UnlkHook is IHooks {
         revert Unauthorized();
     }
 
-    /// @notice Public synchronization reads the token's actual constructor allocation, never caller amounts.
+    /// @notice Public synchronization credits the fixed 3% policy allocation to the launch owner, never a caller
+    /// amount. Seed rounding the factory also forwards to `remainderTo` is deliberately not credited.
     function syncPayer() external returns (uint256 amount) {
         if (!bound) revert InvalidPool();
         if (!payerCredited) {
             payerCredited = true;
             amount = token.PAYER_ALLOCATION();
-            _credit(token.payer(), amount, 1);
+            _credit(payer, amount, 1);
         }
     }
 
     function pendingPayerCredit() external view returns (address recipient, uint256 amount) {
-        return (token.payer(), payerCredited ? 0 : token.PAYER_ALLOCATION());
+        return (payer, payerCredited ? 0 : token.PAYER_ALLOCATION());
     }
 
     function pendingRewardCredit(address recipient) public view returns (uint256) {

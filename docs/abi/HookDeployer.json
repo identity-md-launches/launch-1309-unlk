@@ -24,22 +24,17 @@
             "internalType": "contract UnlkToken"
           },
           {
-            "name": "quoteToken",
-            "type": "address",
-            "internalType": "address"
-          },
-          {
             "name": "launchFactory",
             "type": "address",
             "internalType": "address"
           },
           {
-            "name": "router",
+            "name": "payer",
             "type": "address",
             "internalType": "address"
           },
           {
-            "name": "liquidityLock",
+            "name": "router",
             "type": "address",
             "internalType": "address"
           },
@@ -72,6 +67,67 @@
   },
   {
     "type": "function",
+    "name": "initCode",
+    "inputs": [
+      {
+        "name": "config",
+        "type": "tuple",
+        "internalType": "struct UnlkHook.Config",
+        "components": [
+          {
+            "name": "manager",
+            "type": "address",
+            "internalType": "contract IPoolManager"
+          },
+          {
+            "name": "token",
+            "type": "address",
+            "internalType": "contract UnlkToken"
+          },
+          {
+            "name": "launchFactory",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "payer",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "router",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "rewards",
+            "type": "address",
+            "internalType": "contract IClaimEvidence"
+          },
+          {
+            "name": "oracle",
+            "type": "address",
+            "internalType": "contract UnlkOracle"
+          },
+          {
+            "name": "tickSpacing",
+            "type": "int24",
+            "internalType": "int24"
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
     "name": "initCodeHash",
     "inputs": [
       {
@@ -90,22 +146,17 @@
             "internalType": "contract UnlkToken"
           },
           {
-            "name": "quoteToken",
-            "type": "address",
-            "internalType": "address"
-          },
-          {
             "name": "launchFactory",
             "type": "address",
             "internalType": "address"
           },
           {
-            "name": "router",
+            "name": "payer",
             "type": "address",
             "internalType": "address"
           },
           {
-            "name": "liquidityLock",
+            "name": "router",
             "type": "address",
             "internalType": "address"
           },

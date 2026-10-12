@@ -46,11 +46,14 @@ contract AdversarialTest is SystemFixture {
         assertEq(token.totalSupply(), supply);
     }
 
-    function testZeroAndOverlappingAllocationRecipientsRejected() public {
-        vm.expectRevert(UnlkToken.InvalidAllocation.selector);
-        new UnlkToken(address(0), bob, payer);
-        vm.expectRevert(UnlkToken.InvalidAllocation.selector);
-        new UnlkToken(alice, bob, bob);
+    function testTokenMintsWholeSupplyToDeployerOnly() public {
+        vm.prank(bob);
+        UnlkToken fresh = new UnlkToken();
+        assertEq(fresh.balanceOf(bob), fresh.SUPPLY());
+        assertEq(fresh.totalSupply(), fresh.SUPPLY());
+        assertEq(
+            fresh.SWARM_ALLOCATION() + fresh.POOL_ALLOCATION() + fresh.PAYER_ALLOCATION(), fresh.SUPPLY()
+        );
     }
 
     function testProtocolFeeChangeCannotSilentlyAlterTradingEconomics() public {
@@ -95,16 +98,16 @@ contract AdversarialTest is SystemFixture {
         vm.expectRevert(UnlkHook.Unauthorized.selector);
         hook.afterSwap(address(router), key, swapParams, BalanceDelta.wrap(0), "");
         vm.expectRevert(UnlkHook.Unauthorized.selector);
-        hook.beforeAddLiquidity(address(vault), key, liquidityParams, "");
+        hook.beforeAddLiquidity(address(factory), key, liquidityParams, "");
         vm.expectRevert(UnlkHook.Unauthorized.selector);
         hook.afterAddLiquidity(
-            address(vault), key, liquidityParams, BalanceDelta.wrap(0), BalanceDelta.wrap(0), ""
+            address(factory), key, liquidityParams, BalanceDelta.wrap(0), BalanceDelta.wrap(0), ""
         );
         vm.expectRevert(UnlkHook.Unauthorized.selector);
-        hook.beforeRemoveLiquidity(address(vault), key, liquidityParams, "");
+        hook.beforeRemoveLiquidity(address(factory), key, liquidityParams, "");
         vm.expectRevert(UnlkHook.Unauthorized.selector);
         hook.afterRemoveLiquidity(
-            address(vault), key, liquidityParams, BalanceDelta.wrap(0), BalanceDelta.wrap(0), ""
+            address(factory), key, liquidityParams, BalanceDelta.wrap(0), BalanceDelta.wrap(0), ""
         );
         vm.expectRevert(UnlkHook.Unauthorized.selector);
         hook.beforeDonate(alice, key, 1, 1, "");

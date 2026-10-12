@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-NAMES = ["UnlkToken", "UnlkHook", "UnlkOracle", "UnlkSwapRouter", "UnlkLiquidityLock", "HookDeployer"]
+NAMES = ["UnlkToken", "UnlkHook", "UnlkOracle", "UnlkSwapRouter", "MerkleClaimEvidence", "HookDeployer"]
 report = {}
 for name in NAMES:
     artifact = json.loads((ROOT / "out" / (name + ".sol") / (name + ".json")).read_text())

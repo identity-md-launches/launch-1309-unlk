@@ -33,6 +33,8 @@ contract UnlkOracle {
     bool public tokenIs0;
     uint160 public rangeLower;
     uint160 public rangeUpper;
+    int24 public rangeLowerTick;
+    int24 public rangeUpperTick;
 
     struct Observation {
         uint64 time;
@@ -74,7 +76,9 @@ contract UnlkOracle {
 
     function configureHook(address hook_) external {
         if (msg.sender != setupAuthority || hook != address(0)) revert Unauthorized();
-        if (hook_ == address(0) || hook_.code.length == 0) revert InvalidConfig();
+        // The hook is deployed by the launch factory in the launch transaction, so only its predicted
+        // CREATE2 address exists here. The hook verifies `oracle.hook() == this` when the factory binds the pool.
+        if (hook_ == address(0)) revert InvalidConfig();
         hook = hook_;
         emit HookConfigured(hook_);
     }
@@ -98,6 +102,12 @@ contract UnlkOracle {
         if (lower >= upper) revert InvalidConfig();
         rangeLower = TickMath.getSqrtPriceAtTick(lower);
         rangeUpper = TickMath.getSqrtPriceAtTick(upper);
+        rangeLowerTick = lower;
+        rangeUpperTick = upper;
+    }
+
+    function liquidityRangeTicks() external view returns (int24 lower, int24 upper) {
+        return (rangeLowerTick, rangeUpperTick);
     }
 
     /// @notice Anyone may checkpoint real pool state. The hook checkpoints on both sides of state changes.

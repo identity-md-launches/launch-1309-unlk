@@ -1,6 +1,6 @@
 # UNLOCK (UNLK): The $5M Unlock Experiment
 
-Implemented Solidity/Foundry source and local tests. **Code only; no public-network deployment occurred.** Token name and symbol are both `UNLK`. This is an independently implemented core with an actual Uniswap v4 PoolManager test integration. **It is not yet verified compatible with IMD's launch factory, native reward distributor, fee distributor or production router.** The exact missing boundaries and verified manifest observations are in [the integration review](docs/IMD_INTEGRATION.md).
+Implemented Solidity/Foundry source and local tests. **Code only; no public-network deployment occurred.** Token name is `UNLOCK`, symbol `UNLK`. The launch flow is reconciled with the Sourcify-verified mainnet IMD `LaunchFactory` and its `MerkleDistributor`/`PoolFees` (copied as test fixtures in `test/imd/`): local tests run the factory's real `launch()` against the vendored Uniswap v4 PoolManager. Remaining gaps (Sepolia addresses, per-chain distributor hash confirmation, swap-route sign-off, fork run, independent review) are listed in [the integration review](docs/IMD_INTEGRATION.md) and the [Sepolia readiness checklist](docs/SEPOLIA_READINESS.md). The published-commit dependency failure is diagnosed and repaired in [dependency verification](docs/DEPENDENCY_VERIFICATION.md).
 
 No live addresses, keys or future reward allocations are needed to compile or test. All sample actors, rewards, feeds, factories and fee distributors are explicitly local fixtures. The original request's security and address references were read; no addresses were copied from their tables.
 
@@ -33,12 +33,12 @@ The flag accommodates the **simulation harness**, which embeds all fixture creat
 
 | Contract | Responsibility |
 | --- | --- |
-| `UnlkToken` | Standard OpenZeppelin ERC-20; fixed 1,000,000,000 × 10^18 supply; constructor mints 10% to the swarm distributor, 87% to the liquidity vault and 3% to the paying wallet. No owner, later mint, pause, blacklist, upgrade, transfer tax or transfer quota. |
-| `UnlkHook` | Authenticates initialization and swaps; binds one PoolKey; records lifetime acquisition/sale counters; synchronizes verified credits; permanently advances tiers. |
+| `UnlkToken` | Standard OpenZeppelin ERC-20 `UNLOCK`/`UNLK`; fixed 1,000,000,000 × 10^18 supply minted once to its deployer, the IMD launch factory, which splits 10% to the contributor distributor, up to 87% into the pool position it keeps, and the remainder (3% plus seed rounding) to the launch owner. No owner, later mint, pause, blacklist, upgrade, transfer tax or transfer quota. |
+| `UnlkHook` | Authenticates initialization and swaps; binds one PoolKey; verifies the companions and the factory-created distributor at bind; accepts liquidity only from the factory and never a removal; records lifetime acquisition/sale counters; synchronizes verified credits; permanently advances tiers. |
 | `UnlkSwapRouter` | Authenticated direct-call execution, caller-only funding, exact settlement, caller-only token delivery, batches, slippage/deadline checks and native proceeds/refund withdrawals. |
-| `UnlkLiquidityLock` | One-time seeding of the 87% allocation; permanent principal custody; permissionless fee collection to a fixed distribution boundary. |
+| `MerkleClaimEvidence` | Immutable adapter over the verified IMD `MerkleDistributor`: records a native claim once per round and account from the distributor's own `claimed` flag plus a proof of the `(account, amount)` leaf against the round root. |
 | `UnlkOracle` | Implemented timestamp-weighted v4 tick history, liquidity validation, Chainlink ETH/USD validation and fixed-supply USD FDV. |
-| `HookDeployer` | CREATE2 calculation and deployment primitive for future reviewed deployment. Nothing in this assignment broadcasts it. |
+| `HookDeployer` | Encodes the hook's flat constructor words (manifest order) and predicts/deploys by CREATE2 for local tests. The factory does the real deployment. |
 
 [ABIs](docs/abi/) are exported from compiler artifacts, including the unverified integration boundary interfaces. [Architecture and accounting](docs/ARCHITECTURE.md), [configuration and future deployment](docs/DEPLOYMENT.md), and [security review/checklist](docs/SECURITY_REVIEW.md) explain the invariants and responsibilities.
 
@@ -65,15 +65,15 @@ A sale of executed amount q requires S + q ≤ floor(E × p / 10000).
 
 At full unlock every wallet can sell, including transfer-only recipients. Authentication, fees, slippage and settlement still apply. Falling prices and invalid oracle data never lower an already reached tier. `p = 10000` alone does not bypass the cumulative cap.
 
-The hook takes **zero extra fee**. The fixed pool LP fee is 12,500 millionths = **1.25%**. All official liquidity is held by the permanent vault. Its fee distribution boundary must preserve the official 80/20 division of collected fees: economically 1% payer / 0.25% IMD, subject to pool/collection integer rounding. The mock demonstrates that split; official distribution compatibility remains unverified.
+The hook takes **zero extra fee**. The fixed pool LP fee is 12,500 millionths = **1.25%**. All official liquidity is the launch factory's seeded position; it has no removal path and the hook refuses any non-zero removal. Fees are claimed by anyone through the factory's `claimFees(launchNumber)`: 80% to the requester (`REQUESTER_BPS`, reassignable only by the requester) and 20% to the network recipient named by `LaunchFees` at payout, with `withdraw`/`withdrawNetwork` for payments a recipient rejected. Tested against the verified sources.
 
 ## User operations
 
 - Call the supported router directly from the wallet that funds and receives the trade. Smart wallets execute the call themselves. There are no signed intents, trusted forwarders, recipient overrides, arbitrary payer arguments or `tx.origin` checks. Foreign routers and arbitrary multihop payloads are rejected.
 - Approve only the intended ERC-20 input budget. `maxInput` is prefunded exclusively from `msg.sender`; callbacks only spend the router's own balance. Native input requires exact `msg.value`. Bought UNLK is delivered immediately to the authenticated caller.
 - Native sale proceeds and unused native prefunding become `nativeCredit[caller]`. Call `withdrawNative()` to receive them. Anyone else's credits are inaccessible; a rejecting smart wallet can retry. ERC-20 refunds are returned within the swap transaction.
-- Read `eligible`, `sold`, `remainingQuota`, `pendingPayerCredit`, `pendingRewardCredit`, `p` and `fullyUnlocked`. Native reward claims remain on the native distributor, with its eligibility, proof and release rules. Claiming has no quota/price gate and no dependency on credit synchronization.
-- Anyone can call `syncPayer()` or `syncRewards(wallet)`. The wallet argument chooses whose immutable native claim state is read; the resulting credit always goes to that same rightful wallet. No amount or alternate recipient can be supplied. Duplicate synchronization credits zero.
+- Read `eligible`, `sold`, `remainingQuota`, `pendingPayerCredit`, `pendingRewardCredit`, `p` and `fullyUnlocked`. Native reward claims remain on the IMD distributor (`claim(round, account, amount, proof)`), with its lock, proof and sweep rules. Claiming has no quota/price gate and no dependency on this project.
+- After a native claim, anyone can call `MerkleClaimEvidence.attest(round, account, amount, proof)` with the same leaf, then `syncRewards(account)`. The credit always goes to the leaf's account; a wrong amount fails the proof, an unclaimed leaf is refused, and each round is attested once per account. Anyone can call `syncPayer()`; duplicate synchronization credits zero.
 - Anyone can call `updateMilestone()`. Active confirmation requires valid requests/trades no more than five minutes apart. No user has an admin tier-setting or oracle-changing power.
 
 ## Handoff and release status

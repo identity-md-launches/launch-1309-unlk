@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 import {SystemFixture} from "./fixtures/SystemFixture.sol";
+import {TickMath} from "v4-core/src/libraries/TickMath.sol";
+import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
+import {StateLibrary} from "v4-core/src/libraries/StateLibrary.sol";
+import {IPoolManager} from "v4-core/src/interfaces/IPoolManager.sol";
 import {UnlkHook} from "../src/UnlkHook.sol";
 import {UnlkOracle} from "../src/UnlkOracle.sol";
 import {UnlkSwapRouter} from "../src/UnlkSwapRouter.sol";
@@ -58,6 +62,25 @@ contract LocalFlashAttacker is IFlashBorrower {
 }
 
 contract OracleTest is SystemFixture {
+    using StateLibrary for IPoolManager;
+    using StateLibrary for IPoolManager;
+    int24 internal openingTick;
+
+    /// @dev The factory opens token-only at the range boundary, so quote depth inside the recorded range is zero
+    /// until buyers push the price into it. A 12 ETH local warm-up buy exceeds the 10 ETH quote floor.
+    function setUp() public virtual override {
+        super.setUp();
+        _localWarmUpBuy(12 ether);
+        (, openingTick,,) = IPoolManager(address(manager)).getSlot0(hook.poolId());
+        if (!tokenIs0) openingTick = -openingTick;
+    }
+
+    /// @dev Quote wei per whole token at a normalized tick, from the canonical sqrt price.
+    function _priceWeiPerToken(int24 tick) internal pure returns (uint256) {
+        uint256 sqrt = TickMath.getSqrtPriceAtTick(tick);
+        return Math.mulDiv(Math.mulDiv(sqrt, sqrt, 1 << 96), 1 ether, 1 << 96);
+    }
+
     function _warm() internal {
         _advance(30 minutes);
         oracle.checkpoint();
@@ -73,9 +96,11 @@ contract OracleTest is SystemFixture {
         _advance(1);
         oracle.checkpoint();
         uint256 fdv = oracle.fdvUsd();
-        assertGt(fdv, 49000 ether);
-        assertLt(fdv, 51000 ether);
-        assertEq(oracle.twapTick(), -175000);
+        // FDV = 1e9 tokens x TWAP price x ETH/USD (2000); the warm-up buy moved the opening price up.
+        uint256 expected =
+            1_000_000_000 ether * 2000 / 1e18 * _priceWeiPerToken(openingTick) / 1 ether * 1 ether;
+        assertApproxEqRel(fdv, expected, 0.01e18);
+        assertEq(oracle.twapTick(), openingTick);
     }
 
     function testSameTimestampManipulationHasNoTimeWeight() public {
@@ -287,14 +312,20 @@ contract OracleTest is SystemFixture {
         _advance(1);
         oracle.checkpoint();
         int24 average = oracle.twapTick();
-        assertLe(average, -174999);
-        assertGe(average, -175000);
+        assertLe(average, openingTick + 1);
+        assertGe(average, openingTick - 1);
     }
 }
 
 contract Token0OracleTest is OracleTest {
+    using StateLibrary for IPoolManager;
+
     function setUp() public override {
         _deploy(true);
-        _initialize(-175000);
+        _launchTokenOnly(OPENING_TICK);
+        _localQuoteDepth(10000 ether);
+        _localWarmUpBuy(12 ether);
+        (, openingTick,,) = IPoolManager(address(manager)).getSlot0(hook.poolId());
+        if (!tokenIs0) openingTick = -openingTick;
     }
 }

@@ -1,59 +1,50 @@
-# IMD integration review — unverified production boundary
+# IMD integration review (revised 2026-10-12)
 
-Reviewed 2026-10-11. No `.imd/reads/network.json`, official factory/router/distributor source or deployed-contract ABI was supplied. No supplied address was substituted with a guessed address. No public-chain transaction or RPC-based contract verification was performed.
+Previous status: INT-01 and INT-02 open because no official factory, distributor, fee or manifest interface had been verified. This revision reconciles the project with **verified** sources. Mainnet release and Sepolia deployment remain outside this job.
 
-## Evidence inspected
+## Authoritative sources inspected
 
-- The task's six pinned security/address reference and license files. They are input-only and are not build dependencies.
-- [Identity-md/univ4hook-start-template at 8254234c70e74de59f32ad6ff524da59a59aa52a](https://github.com/Identity-md/univ4hook-start-template/tree/8254234c70e74de59f32ad6ff524da59a59aa52a), including README, Foundry configuration and repository tree. It supplies a hook scaffold and local pool harness, not verified launch factory/fee-distributor/reward-distributor ABIs. Its native-ETH launch is a token-only concentrated-liquidity position at an opening boundary. Our native fixture preserves that structural opening and uses 87% instead of the template's entire-supply demonstration. The actual release opening market cap and range must come from IMD's approved launch economics.
-- [Identity-md/worker at 0bf1c6333e786bc240dcfaaaa730f33d153271b5](https://github.com/Identity-md/worker/tree/0bf1c6333e786bc240dcfaaaa730f33d153271b5), `dist/client.js` and `dist/cli.js`. These contain launch manifest/economics schemas and validation logic; they do not establish the onchain factory/router/claim/fee APIs needed here.
-- [Identity-md/identitymd-skill-crafting at fa541fd81326b532d315576fa113c78b67b30ca7](https://github.com/Identity-md/identitymd-skill-crafting/tree/fa541fd81326b532d315576fa113c78b67b30ca7), repository tree. It provides contributor examples rather than protocol interfaces.
-- Canonical [Uniswap v4-core v4.0.0 source at e50237c43811bd9b526eff40f26772152a42daba](https://github.com/Uniswap/v4-core/tree/e50237c43811bd9b526eff40f26772152a42daba), vendored with licenses. `IPoolManager`, `IHooks`, `StateLibrary`, actual balance deltas and actual PoolManager execution are used. The matching version places swap/liquidity parameter structs inside IPoolManager.
-- [Chainlink's AggregatorV3 API reference](https://docs.chain.link/data-feeds/api-reference), for decimals and round metadata semantics. No address shown there was installed as deployment configuration.
-
-These observations are limited to the inspected sources. They do not assert that no official interface exists elsewhere.
-
-## Verified manifest fields, not a launch manifest
-
-The inspected worker's `UniV4HookManifest` exposes:
-
-| Field | Observed shape |
-| --- | --- |
-| `kind` | `univ4_hook` |
-| `hook.contract` | Solidity contract identifier |
-| `hook.constructorArgs` | Array of up to 16 strings |
-| `hook.permissions` | Up to 14 hook permissions |
-| `token` | `contract`, `name`, `symbol`, `decimals` |
-| `pool` | `pairedCurrency`, `fee`, `tickSpacing`, `initialPrice` |
-| `notes` | Text |
-
-The separate `LaunchEconomics` schema has `poolBps`, positive `initialMarketCapWei`, and `remainderTo` required below 90% pool share. For this request the intended pool value is **8700**, the swarm share **1000**, and remainder **300** to the actual paying wallet. The inspected `UniV4LaunchPolicy` includes supply, contributor/liquidity/treasury shares, wallet caps, contributor lock/recent-contributor rules, paired-currency allowlist, fee tiers, opening-market-cap limits, gas ceiling and ownership fields. Their exact release values/rules were not supplied and are not invented.
-
-**Known compatibility gap:** the inspected `univ4_hook` token schema lacks constructor arguments, and CLI manifest constructor extraction supplies no token arguments. `UnlkToken` deliberately takes three explicit allocation recipients. The core also uses several companion contracts and a tuple hook configuration. The verified schema does not prove that the official deployer can orchestrate these dependencies, accept that tuple, or perform authenticated one-time setup before initialization. A reviewed IMD deployment integration is required; submitting this code under an invented `launch.json` would not solve it. No `launch.json` is included.
-
-## Exact missing interfaces and evidence
-
-| Boundary | Required evidence before release | Present implementation |
+| Source | Verification | What it establishes |
 | --- | --- | --- |
-| Authorized launch factory | Actual initializer identity reported by PoolManager; constructor/deployment order; allocation receipts; CREATE2 deployer semantics; setup calls before initialize; opening tick/range calculation | Immutable `launchFactory` and authenticated one-time configuration; `MockLaunchFactory` is local only |
-| Official route | Actual caller/beneficiary propagation, sourcing and delivery semantics, exact-input/output and multihop behavior, permission to use the restricted route | `UnlkSwapRouter` implements an independent direct-call route; no assertion that IMD uses it |
-| Native swarm rewards | Token/distributor identity; immutable recipient and cumulative-delivery state or authentic callback; original entitlement/proof/release rules; deduplication across claims/epochs; upgrade and clawback powers | `IClaimEvidence` is a **required unverified boundary**, not an official ABI; `MockRewards` implements local Merkle/release scenarios only |
-| Fee distribution | Actual official method for receiving native/ERC-20 LP fees and dividing payer/IMD amounts; wallet identities; authorization; rounding; failure behavior; withdrawal rights | `IFeeDistribution` is a **required unverified boundary**; local mock validates 80/20 conservation |
-| Principal protection | Actual position ownership and all removal/transfer/approval/emergency/governance paths; compatibility with official fee collection | Independent permanent v4 position lock implemented/tested; official factory compatibility unverified |
-| Chain dependencies | Canonical manager, Chainlink ETH/USD proxy and feed config, and WETH if used; chain ID, code hashes, verified implementation/proxy powers and pinned fork block | Constructor parameters and read-only checker; no production addresses provided |
+| Ethereum mainnet `LaunchFactory` `0x12c63b581d07093f6126bc02263c58f7eadaa96f` | Sourcify **full match** (creation + runtime), compiler 0.8.26, optimizer 200, cancun, `bytecodeHash: none`; `cast code` on a public RPC returned code at block 26174644 | Launch flow, token/hook deployment, allocation split, fee split, principal custody. Copied verbatim to `test/imd/` (see its README for the single import adaptation) |
+| `MerkleDistributor`, `PoolFees`, `LaunchFees`, `LaunchRegistry`, `HookFlags` | Same Sourcify match (compilation inputs of the factory) | Native claim state shape, fee recipients and withdrawal rights, requester reassignment |
+| `Identity-md/worker` `dist/cli.js` and `dist/client.js` (main, fetched 2026-10-12) | Repository files, not on-chain | Manifest schema: `univ4_hook` token has **no constructor args**; hook `constructorArgs` are flat words with placeholders `$poolManager`, `$token`, `$owner`, `$factory`; a hook constructor input whose `internalType` ends in `IPoolManager` must be `$poolManager`; `validateHookConstructor` requires one manifest string per ABI input, so **tuple constructors are unsupported** |
 
-A production claim adapter must expose:
+No Sepolia address was obtained or guessed. The Sepolia factory, fees contract and PoolManager must come from `.imd/reads/network.json` or the chain table of the launch task; none was supplied here.
 
-```solidity
-function token() external view returns (address);
-function distributor() external view returns (address);
-function claimed(address recipient) external view returns (uint256);
-```
+## Launch flow as implemented by the verified factory
 
-`claimed` must derive from immutable native onchain claim state, not logs or a new admin-written allowance. Native claims must remain callable when the adapter/hook is unavailable. If the real IMD distributor exposes only a claimed bitmap, an adapter must verify original immutable leaf contents and native claim state onchain before exposing cumulative delivered amounts; arbitrary user-supplied amounts cannot be accepted. If native proofs cannot establish actual recipient/delivery, do not ship the adapter.
+1. `launch()` (deployer only) CREATE2-deploys the token (salt = launch number, no constructor args), then the hook (mined salt, flat constructor words). Hook flags must include an initialize flag and match the address exactly.
+2. The token must have minted its **whole supply to the factory**; the factory checks balance and total supply.
+3. The factory creates the `MerkleDistributor` (CREATE2, salt = launch number), transfers 10% (`SWARM_BPS`) and opens round 0 with the manifest's root and lock.
+4. `initialize(key, sqrtPriceX96)` with the key the factory sorts itself; the hook's `beforeInitialize` sees `sender == factory`.
+5. The factory adds a token-only position it keeps forever (it has no removal path; `claimFees` only runs zero-delta collections) and reverts if any paired currency is spent or more than `poolBps` is taken.
+6. The remainder (3% plus seed rounding) goes to `remainderTo`; the registry records the launch.
 
-A production fee adapter must expose immutable `payer()` and `imd()` and consume already-transferred fees through `distribute(address,uint256)`. Its semantics must match official distribution; it must not invent a new fee or award an extra credit. Native ETH receipt and all downstream collection rights must be inspected. The source includes **no purported production adapter** for an unavailable official interface.
+## Compatibility matrix
 
-## Unfinished work
+| Requirement | Verified interface | Project state | Status |
+| --- | --- | --- | --- |
+| Token: no constructor args, whole supply to `msg.sender` | `LaunchFactory.launch` + CLI token args `[]` | `UnlkToken()` mints `SUPPLY` to `msg.sender`; name `UNLOCK`, symbol `UNLK` | Reconciled, tested (`LaunchTest`) |
+| 10 / 87 / 3 allocation | Factory constants `SWARM_BPS = 1000`, `poolBps = 8700`, remainder to `remainderTo` | Hook verifies at bind that the distributor holds exactly 10% and the factory holds 90%; payer credit is the fixed 3% | Reconciled, tested |
+| Flat hook constructor, 8 words | CLI `validateHookConstructor`, 16-word max | `(IPoolManager $poolManager, token $token, launchFactory $factory, payer $owner, router, rewards, oracle, tickSpacing)` | Reconciled; `HookDeployer.initCode` encodes exactly this |
+| Hook constructor makes no external call | Launch checks on an empty chain | Only `Hooks.validateHookPermissions(this)` (pure) | Reconciled |
+| CREATE2 flags `0x3fc0` | `HookFlags.matches` (exact equality) | `FLAGS = 0x3fc0`; mined against `predictHook` | Reconciled, tested |
+| Companion setup before the launch tx | Hook exists only inside `launch()` | Router and oracle accept the **predicted** hook; the hook verifies `router.hook()`, `oracle.hook()`, `rewards.token()` reciprocally in `beforeInitialize`; a mismatch reverts the whole launch, deploying nothing | Reconciled, tested (`InitializationGuardTest`) |
+| Liquidity custody | Factory keeps the position; `PoolFees._collect` is the only later callback | Hook accepts liquidity only from `launchFactory`, and only zero deltas on removal | Reconciled, tested |
+| Fee split 80 / 20 | `LaunchFees.REQUESTER_BPS = 8000`; network share to `feeRecipient()` read at payout; `withdraw`/`withdrawNetwork` for rejected payments; `setRequester` by the requester only | No project fee contract; tests exercise claim, rejection ownership and recipient moves | Reconciled, tested (`CreditsAndFeesTest`, `NativeLaunchTest`) |
+| Native claim evidence | `MerkleDistributor.claimed(round, account)` is a **bool**; amount only in the leaf | `MerkleClaimEvidence.attest(round, account, amount, proof)` requires the distributor's flag and a proof against `roundOf(round).root`; credit only to `account`, once per round | Implemented, tested; see assumption on one leaf per account |
+| Native claim unrestricted | `claim` has no dependency on any adapter | Adapter is read-only; tests claim with a broken feed and without attesting | Reconciled, tested |
+| Distributor address before launch | CREATE2 with `type(MerkleDistributor).creationCode ++ (token, factory, fees, sweepDelay)` | Local tests predict it exactly from the verified source; on a public chain the deployer must confirm `factory.distributorCreationCodeHash()` equals the hash of the compiled creation code (same solc 0.8.26 / 200 runs / cancun / no metadata hash) or simulate `launch()` with `eth_call` | **Open until confirmed per chain** |
+| `$owner` equals `economics.remainderTo` | Both are the requester's wallet in the worker flow | Hook credits `PAYER_ALLOCATION` to `$owner`; a request naming a different owner would credit the wrong wallet | **Operational check in the readiness list** |
+| Official swap route | No IMD router interface exists in the inspected sources | Trades must go through `UnlkSwapRouter` (hook rejects other senders) | **Unchanged project decision; needs product sign-off** |
+| Sepolia addresses (factory, fees, PoolManager, Chainlink ETH/USD, WETH) | Not supplied | Constructor arguments / manifest fields | **Open; never guessed** |
+| Fork integration | Public mainnet RPC reachable in this run, Sepolia RPC not supplied | Not executed: a mainnet `launch()` needs IMD's deployer key, and a Sepolia factory address was not provided. Local tests run the verified factory logic against the vendored PoolManager | **Unavailable, reported** |
 
-Obtain verified official interfaces and chain data, implement/review minimal immutable adapters, reconcile token constructor and companion deployment with the manifest, run pinned Sepolia fork integration, establish official router support, verify fee-policy and withdrawal rights, perform an independent security/economic review, and prepare the separate release manifest. Mainnet release and public websites remain outside this assignment.
+## Exact unresolved interface requirements
+
+1. Sepolia `LaunchFactory`, `LaunchFees`, `PoolManager`, Chainlink ETH/USD proxy and WETH addresses with code checks.
+2. The deployer's `sweepDelaySeconds` and `contributorLockSeconds` for this launch (needed to predict the distributor; alternatively an `eth_call` simulation of `launch`).
+3. Confirmation that IMD's tree builder emits one leaf per account per round.
+4. Confirmation that the manifest's `$owner` is the same wallet as `economics.remainderTo`.
+5. A statement that `UnlkSwapRouter` is the supported trading route for this launch's site/UI.

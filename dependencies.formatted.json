@@ -1,0 +1,1082 @@
+{
+  "lib/forge-std/src/StdAssertions.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "12fd182a853884387908b920a5b23f96b51a8da6baa785f96700c65efa5d7759",
+    "upstreamSha256": "d4c89eec70d267dec6188461fbc74d3dc8c47e518d176a23417533a232ed9780",
+    "upstreamTokenSha256": "cb1c43a466bdc2dcf7455696d81b8e68448d92a7282dbbdc155cb29b7399b46d"
+  },
+  "lib/forge-std/src/StdChains.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "58c0b3c84ccf490f7ce9b180c0fac8545fd44194ea59c7fa31804d014b52a1b8",
+    "upstreamSha256": "09a88ace5bc037f4a805c7ae071abf675ce802c8b36810287cd327b7d035fb81",
+    "upstreamTokenSha256": "ae0da52d4b334dfe4da9e477bfe75e1190a25266da9cd88c4a5a7802f8e5c751"
+  },
+  "lib/forge-std/src/StdCheats.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9c775f65da79c0513fc4d980ec5147e48150e1019192283c506a7d850a5fa649",
+    "upstreamSha256": "29af42f9d670fd22e9fc3ebe3c2da194471e93e210361c41d3d26ef04e9dca28",
+    "upstreamTokenSha256": "b22ee8502f8aca355d6b0e427f41266a5329357bf39f88df9b972231567cf196"
+  },
+  "lib/forge-std/src/StdConstants.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "e98dc7a32a634dac2d47ec73b46048f120b8c70085466cedfacf2087b6dbbbf4",
+    "upstreamSha256": "6c785abd2fb9d42560f867d8e43e729c55f5bda2c06e5ddae27b17e301de4f04",
+    "upstreamTokenSha256": "25bf81257f1bf1fa5bd7ddb631b3c8a6f0624f7407ae0a3d43a32c66500daa12"
+  },
+  "lib/forge-std/src/StdInvariant.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d91cfab309897026347548f7fc1d2b1616df9386f9fca4a3a2e8dc84f9294db0",
+    "upstreamSha256": "f572e991cfe874844b3b75a540e38e2161c29b5d9ab1635a3c4f1a16c548f987",
+    "upstreamTokenSha256": "93b1bcc180be8d17e90602302af6f702e05bfe05b98e267c9a1bbf24ed8d00cf"
+  },
+  "lib/forge-std/src/StdJson.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "be7276ffb1d9aac4f9941b1eed8c358f672e329d8b34472524b09d7e887576d1",
+    "upstreamSha256": "0211b47e93dbeb6a7de6112470a77137038ed73b79b015847f013e49fcd7511f",
+    "upstreamTokenSha256": "9b13bd6dbfaa9419057f4ebd610e1eb8ce5fa19d881772681daa9bdf762c4684"
+  },
+  "lib/forge-std/src/StdMath.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9c5a5c74b7af2037b3396bc1be63502a321bc18a3556cb1abcc63724e94d0186",
+    "upstreamSha256": "f04fc0616741563eb32d66c11af7fdca55a7202221e14282268c7be851fc63ab",
+    "upstreamTokenSha256": "bb7338a60260e2f77467393a0ac8a08793637d8e7f75301b5b4e27422b02817f"
+  },
+  "lib/forge-std/src/StdStorage.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9dea677b44b768cbb7cdc7475a276f05cd8a7181235972f1e7136e1dbec574e6",
+    "upstreamSha256": "c6dbb05b29be5bcbfabf06ea46b64fe9fbdb7542681795614ca3dee248214215",
+    "upstreamTokenSha256": "390182a2866a5bdd9df67ff2bde9cac442c6c4c12542b4e8b73cd799882af4d0"
+  },
+  "lib/forge-std/src/StdToml.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2306f8b169784e8a9134328dc64d1b0812c293b9a35a085a0dba9becd177e03f",
+    "upstreamSha256": "de3fb35af79a1fd2a2de9bc4ca7866e4102f9d3fbf11f66f3fe82696412d47e2",
+    "upstreamTokenSha256": "e58f9981a85d68f87de3178b3e73b55508e814e03e65b1eb3bfe448f6cc01cde"
+  },
+  "lib/forge-std/src/StdUtils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "cb88b584e246819c7248fab48455b9d9b075aa37b5a71687c5e91127b07be085",
+    "upstreamSha256": "c64a4d5023e6d46884734b8cb1b0f424bab26f0ccc920779b58d2f841c4506ae",
+    "upstreamTokenSha256": "70f008ca6759222dc95461f630b77dfb7271819091ceaadf586e8b3aafae370c"
+  },
+  "lib/forge-std/src/Vm.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "e83459505ce804ce24f6768c5675f7b57137eaae7237893ff5052b81a3aead52",
+    "upstreamSha256": "9068805b59ac1d0ea03a8fa1f15ae49c094e0c6c852a2500e0dd112f264b2cb1",
+    "upstreamTokenSha256": "fe772424ec5d5c1bbe4f3f375aea816279a5f036307e9a62874b93e85923f325"
+  },
+  "lib/forge-std/src/console.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a2e632dcbc787bb096e2c06bad26c6e5e09bafca18466b236b1f2687c2ad79e9",
+    "upstreamSha256": "896c5a5a5c235cb11a39876d430e1fc2c621e7950c4637ca58251b84b053f178",
+    "upstreamTokenSha256": "9dbe400a39751f6e5c9a59e35ee689b6bd065a5f3d6643bc3439559879a450a4"
+  },
+  "lib/forge-std/src/interfaces/IERC1155.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "63d55dc057bc6bce886668420d6d93d4eefdb218e90c3b6878ef4b05677cbabc",
+    "upstreamSha256": "d44fde880db31958113ed5b490ed30766f7843137947893506e35b161b959000",
+    "upstreamTokenSha256": "4c9b4559f2f4a99cdb2ac63dac9ff942c7dd328ca3a840664ee1d9c4e79ff629"
+  },
+  "lib/forge-std/src/interfaces/IERC4626.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "083020d6f851a8dafeffc2e59c37e71a6240d6d7eeefe06659696969ce70f6e2",
+    "upstreamSha256": "6a5115bfcaba28ad7f11d1e3973718683f5bac596f0e567d0a1cd4d3308e98b7",
+    "upstreamTokenSha256": "d47c75d2e56e0190fbc65b0177d9f96a240cc4a32a26ba5fec96559f5880c548"
+  },
+  "lib/forge-std/src/interfaces/IERC6909.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "fddc218532c8385fba60953ebd31df40e4eef71391c2980111646be3276c45f3",
+    "upstreamSha256": "b42d2ff602839f784bbf1012e124c01e11784b5b08bc828fbc6b151d2477f517",
+    "upstreamTokenSha256": "e8fa95a3122459a7cf995412790e2d842a0096875eec45a94b6eec52eca7defe"
+  },
+  "lib/forge-std/src/interfaces/IERC721.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8d28a2dd59fe66daaf43841b791872b22f1e0ffdee93a9bce4de4d29bfa4d864",
+    "upstreamSha256": "f6383f58bcf3a0f34717ae4ed5866b78201fd646df2e5eb2b7234d2ea2466ae5",
+    "upstreamTokenSha256": "09a8f153a631b977fe9b55875c8b0f4174f406e458941ccc51417c05b238aff7"
+  },
+  "lib/forge-std/src/interfaces/IERC7540.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "029ba9e7c048488e1f7f0b9517c54d85fe606c38b58951e9282882fd68f73d4c",
+    "upstreamSha256": "c6a7854c86bf3772a996fd70fc11b84930b03f136e98fce6e8cc36534af1d6c1",
+    "upstreamTokenSha256": "100b47a8963038193cd2d6ad1d6b35a953a5a7c675e24a9cb722a646150e7810"
+  },
+  "lib/forge-std/src/interfaces/IERC7575.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d519bc03c1e765f53757b65ac67715ba136938d4e7b15a5102421dff3bdf3666",
+    "upstreamSha256": "31c45af17a667da7fe1710097cdc1edb6dbae0665f12a361b8632a4be0ead219",
+    "upstreamTokenSha256": "6c7ba190852d3e9e0d5b96e4d82300a0b0a72e8e12da503d9a6ab7dc19c7a026"
+  },
+  "lib/forge-std/src/interfaces/IMulticall3.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "dea1bc3bfcab8f140d5d6d21e01ca1ed194bc80608a7646b7efcba5be83d2112",
+    "upstreamSha256": "6620d9c5ea2e2291440e1dcce5072f948b7ec4d65075876a0d0ac9267d3342e3",
+    "upstreamTokenSha256": "f923f71fa4c102b86394fd0d880d250fa186d1d86b0c3bb2dba23fd508f2d5c6"
+  },
+  "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "07df6e1b2e3fc5fee97262fb0b0bcdbac3943fbd24e5b5075c65943f9e28fcc2",
+    "upstreamSha256": "c112f5c86fdc4e862f88d4f5694530342320923ebd5b5e7d9d8493550d337c2d",
+    "upstreamTokenSha256": "ed2b8925ea536b84ad52d5354697b101da3e09e7c21a335d74a243563134e86d"
+  },
+  "lib/openzeppelin-contracts/contracts/access/extensions/AccessControlDefaultAdminRules.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "6a0078637836ee7ad6ebcd94148077ab1145af03fc644816162355721da20e27",
+    "upstreamSha256": "fefdd334836d2fd96871284d4cc3877d95f081bbc54fc179a8572a5f2d50f7ad",
+    "upstreamTokenSha256": "71fd843a94cd739f48ab223673e2262e25cda2e60455f4eb0fb16a6002c027af"
+  },
+  "lib/openzeppelin-contracts/contracts/access/extensions/AccessControlEnumerable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2e55d0572283d7241858c80eff0997bc0c6c41544131219e61b31c467d0fc13d",
+    "upstreamSha256": "d6c882c624699389abe9a4d8b6ad1f3d304ad6610221ac1cbd32f909e402629f",
+    "upstreamTokenSha256": "96ddd8111cea355b41eb4ad2b673ed481044afa728dfb64aa304ce560e110c07"
+  },
+  "lib/openzeppelin-contracts/contracts/access/manager/AccessManaged.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "967cc84936e581c4f6aca21805b01bbde5f4ef536352268cd024c44c83773031",
+    "upstreamSha256": "6834e350bc8bedbb042a62f6681f7976186e92e7febac2575bae081d81244ea9",
+    "upstreamTokenSha256": "30256e5fcf2b4de155ff592d3f6996d0a4dccc0a2a0a1996ca5ce94a2963b130"
+  },
+  "lib/openzeppelin-contracts/contracts/access/manager/AccessManager.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "de3d9f389bb1a37eaa8c29c43b04ebcda5b133a0bc2dd8e1d333443b8eccf256",
+    "upstreamSha256": "72f06a0f03f2044d9b3bf036933aca7d589f0b8875a596206d50b696e59e8781",
+    "upstreamTokenSha256": "3f786524dbe8bfdc5c3b7934127d0bec21808fd9874b932aa8e1df61461d0f86"
+  },
+  "lib/openzeppelin-contracts/contracts/access/manager/AuthorityUtils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "e50a3b80fe3a15ceeb82cf7bc3d670caef2e40d18fed97b0a6cdccec0564894d",
+    "upstreamSha256": "6a78662d327e8c82eee93a4659ddfb62a1f477f8cd9a2319848b3566e40baac8",
+    "upstreamTokenSha256": "6d0f8d3618b6b0ebc2a3240988f30a19c37beef9675463d72344ecaeb40186a9"
+  },
+  "lib/openzeppelin-contracts/contracts/access/manager/IAccessManager.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8cdaf322e982ef0a9a460253f909adecb05c1fe85614b49cb012d4e596544896",
+    "upstreamSha256": "11da09673a4026c23d15f88562cc8cfff23646fb8264dad62db7f6ff1e992297",
+    "upstreamTokenSha256": "dbd131fe3a785e8069fb894b582a67b4c026f86125a467bb0f3300ac88d20743"
+  },
+  "lib/openzeppelin-contracts/contracts/account/utils/draft-ERC4337Utils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "83ae9c520ac6546b688edb9d0e04509c90684ad64d1075a06de429352639d5ae",
+    "upstreamSha256": "63f068487d71a4b6cd9f274cf21ec5a0eea264d24d52e1f22d3b595a6fac08b1",
+    "upstreamTokenSha256": "b70a14b7a4243690e2e4af900a3dd0571cfd94be94e6d6cf73ed686d01d2b510"
+  },
+  "lib/openzeppelin-contracts/contracts/account/utils/draft-ERC7579Utils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "1c869ff1273590446f9ac4ae98f3c55cc8802838be5e0a91044d2f0dbcaf9b80",
+    "upstreamSha256": "522d649a8edb4c6d94c1ee59661b00c146c64f20c7bf329512387bdeb41d4e37",
+    "upstreamTokenSha256": "8d38ac25f891b421e1c5cfc3eb42d9ac15825829be4b9b1c7802a7e99bff7ea1",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/finance/VestingWallet.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "88540f2ec7d23a3b2cd4b7d6ae633225367c79029fb3cf8a395bb4b5556589b9",
+    "upstreamSha256": "585d97b53f17da05cf97080a127a348ea68de5aa5228600c931c7f87f934948c",
+    "upstreamTokenSha256": "1564f3ade16b3be9f0b7316b055fe27b84adffc22b82eb053bc88259f327cc84"
+  },
+  "lib/openzeppelin-contracts/contracts/finance/VestingWalletCliff.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d1ba68cd6050932110e1f3461f7e34b7b69b2ef47db43de0c1d4f9d246358040",
+    "upstreamSha256": "14981dea962b6c81e253295b702f2a461d7db60ae93715b293e95028d51b81f9",
+    "upstreamTokenSha256": "7dfd8add414d2e04b4f45c7bfc3356b79f7e034bbe362a94219704a6791bfd7d"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/Governor.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "a21d906fa2d6657546d5ba5f37d5f03b89bd9c14568f4d1a7fbb76a28e66d8d4",
+    "upstreamSha256": "063125f0ce359e1bf169c2ff8989e0b8f5ffc87b766398c158d229be1e147dd4",
+    "upstreamTokenSha256": "8fd596d40fe7973c6902c5dcb49c5b3187f7cdfb316be45c043c04d76d801e5a",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/IGovernor.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "59beacbf8206cfb05ccf972544c7c15976e4d1193bb56ae17b8fd119e1e0b77d",
+    "upstreamSha256": "2f73642a69d9ff9033ffbb835dfac260c523e32d65e0eec3259857e5934882bc",
+    "upstreamTokenSha256": "94dc872c65e83d813ab22c7c617291e36150d3624eb859139baf9b6fa9ed2e2c"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/TimelockController.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "f57e9870d2916cfb4aa475861038e9e6d46a62bf5b20736df8b67d0748f1ed93",
+    "upstreamSha256": "89a4cf0e404a42f13d01efefb5c1b3b1d46641c670b626b1b885330f3faccd2a",
+    "upstreamTokenSha256": "162a5d4c495b887d8863274ae95ee51a4264ffd48a2275831ff5f9e27399f4aa"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorCountingFractional.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "68be709fb07940dbf9f14dc4c508f8d946016748985f615a2a0fb70fbc730178",
+    "upstreamSha256": "06fd91844a6e6c6ed4425cb5238e7c6dc2a99499d6b266286ed9ebdc8e34c4ec",
+    "upstreamTokenSha256": "2ed89f4b8a416d20e84c89b66c0732a4e6edb83dafb1cd43e34d38b31b4ff74f"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorCountingOverridable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "762723c12abdf76fe540fa784bf52f6fdb96f43b0a4e255e6fafc47d1b95c4fd",
+    "upstreamSha256": "dc35cfdbcf97f991b7259dc37ff20176dfbed315fb7a4aeb47b8df34c3cdd47f",
+    "upstreamTokenSha256": "0c8c684028d9ffe1dbaff29d64168a44230bfab27e86203868a42d3b588afb4b"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorCountingSimple.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "57c399e39b8d231ad0cb6a0e170e718cea620cb5bf345032c7585f9020465b69",
+    "upstreamSha256": "fee9f14eae7b45504e19f2e5dd55e74d7ce05f9733157a5811bd883b80256639",
+    "upstreamTokenSha256": "6654d9094c50dca120f4d877fcf5e0b2fb8d21d4b11699ab5c7fea2b58fef8ee"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorStorage.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d2b65b878e4f09c5c74d722888b271c00020711ebd05cc23f93207201dec6849",
+    "upstreamSha256": "55ba9882c6d66026a6024cfe1db873754b0974a3859f709b765e35089e13d64c",
+    "upstreamTokenSha256": "7b574285265ca96fbfc39cc81203721b6942a8fbf49bbdf36a0c4a1ecf132956"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorTimelockAccess.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "1364465283d6463e96cef984df20e557a18b1aad26014f4f689b5d9866a312f8",
+    "upstreamSha256": "676584f6c287cd0efbf388bdf0881a1654f63562b9a7ea6be03cc1a93c938266",
+    "upstreamTokenSha256": "570588d17a8427c00897e87da12a508ca117f12c228cfc21f46bb410cb2f19ba",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorTimelockCompound.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "4f227122c16135ff5a7d272e2447b43cc1cc26badb431d0a320471b2bf11f22b",
+    "upstreamSha256": "ee11bd77cdfeaa113b804edb9ebc3c43e8fdc4a3f8c8dbd618af45e9f8a3b35a",
+    "upstreamTokenSha256": "7585279b88475d0ee0c62d316a4d98dc6203eafd77c951fa115b80add0778c16",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorTimelockControl.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "6216562fd1af2a83399d5e52bd033778b6f8342eb3a2fe31977613383699323b",
+    "upstreamSha256": "4fe02228a581a7b5f0f322834b79a898c5d65e1222573ca8afc0334feb6ae48b",
+    "upstreamTokenSha256": "2dbad9b21319c1121c44b33255ec67f0fb188108eccc5c53c105e5f911a75835"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/extensions/GovernorVotes.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "abe36c3b907dd3ea48e4b8af7d675dcdec2318f81bf3557be19b97430d15e8da",
+    "upstreamSha256": "bd306880ef79bac2fbd7ba3ed6ecc43bef4f78cbb5e26d12bdc0cc18a795163d",
+    "upstreamTokenSha256": "bf280bdfa41eb9d33160b0495ddb4331e06a05cd70252f6f0245692958667a78"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/utils/IVotes.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "eda187d590cfb031462836fb517fff46c3118b6978b61549bee5b45820bb7e6f",
+    "upstreamSha256": "f033b73ce92762d9ed9496b8a0f5f72bd0479e42388da584c2ff276cbb5cb9b1",
+    "upstreamTokenSha256": "622467e15722d5df93c9a2ec6a7f6b2f32cca9bee036b62a79805cac4d1d3b68"
+  },
+  "lib/openzeppelin-contracts/contracts/governance/utils/Votes.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a8d5d606ca2635a767b29145dc58c7f57bd68ec48a0eb353704f71468b0f02eb",
+    "upstreamSha256": "feded838fdab8e52e1a3352f95dd7e63311b2c079f2293bda17633fbefda6d96",
+    "upstreamTokenSha256": "36a7a2426c234660716d4c370b6d13428c6efb458901eee157fbf6473f285015"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "ba5b3b99bec389b04e2e9865fccce5f0b97546e666ca246fb87d9c91e2cb43bd",
+    "upstreamSha256": "54f427f63724d9760211dfa9e0cc5d79d86c0724becd81f8e638e2e27b0e2669",
+    "upstreamTokenSha256": "1db8cb286305900b32551fc3e4842b9c719215345ad59b29058a39a195e2a6e8"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC1363Receiver.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "5454c4c33938d6cc20aa51c8f61d39d57077b569c2c685b76cf921a11f68ace9",
+    "upstreamSha256": "21584d4866c59fed42491cfb43a009ab451d1c387c951c7b7cadc3fdab68baa2",
+    "upstreamTokenSha256": "158652c3a9a3f616178473629ed048d0bd7d2a25bc3d8c20824b02e08992ab34"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC1820Implementer.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "5470216fe808730988f715d3b92d4a2174c4597473508e206a30d42d819bbaeb",
+    "upstreamSha256": "9b7704eb411b2ebde03bb2a0a866cab485a21c41891ad79c1acebe04afda4e68",
+    "upstreamTokenSha256": "54f9985aabbc149273368b82169c310de04392370206cbe1d0ae1d960ac31ad4"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC1820Registry.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2ebefe2368099036084f1906a432ffa6c74c1c4c3a7a4a7911ae707abe6e70d5",
+    "upstreamSha256": "70337a0847da40172c8461693d6048c7a159ee0db9e5df6d8bb6024ab38fbef3",
+    "upstreamTokenSha256": "47a8ee195cf3c6dccf1ec63ec9dea49addb23f4a1ac74ca954bbd0473ee55e1e"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC2309.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "303bf0382f2b1a2f6887670b671414ef66dfe378d8d800753f67def2316e1dac",
+    "upstreamSha256": "fb0568452aff870d2ec0e91c990f7b29d09001fc77c7413897f5fc5ccf492736",
+    "upstreamTokenSha256": "b07df5c3c2e6b094646f2ed6c419858f6dea611ad6fccb0869236ce4d2c993c7"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC2981.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "60873d71048cd1e3ee7e2282a7db0ea5725e5c15d6899190dbc8c4514af3b40a",
+    "upstreamSha256": "6a8ea184edb362922fb260ba9c43dc867e3b32cd3547d3de9299344cdf91c635",
+    "upstreamTokenSha256": "d0274acdddec8e6a90fd4f39051bd1ee1d094688d2f4d17f5af8db9b77be3a36"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC3156FlashBorrower.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b94728812754670f31dd1e465e551180b18a244c24bee809e58d313c1dcd9536",
+    "upstreamSha256": "91bbede9a1163c3522f50f558b0f3d1d9c95c0e404d9a42d30286c1f481b2c11",
+    "upstreamTokenSha256": "e6e9b433aa12baf5a57bb8e3e35b0eff65f916dfb58597937eb7c4577b2dfbb0"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC3156FlashLender.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "bd289f3442596bf856950a63e9da9ab17ea74591b70fca1a79ca46d861804647",
+    "upstreamSha256": "dd1b735c90f497c80743934aa7ec874aa50c359e001dd19c83caff4a227ca804",
+    "upstreamTokenSha256": "60038eda5ecf7315124635e6ef8e51c13219849a7937753700a08dee366ea5e5"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/IERC777.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "ad6fd27ce2c6d22d9d491268e81a71243208dd8b85dc99de78399a88a28d4715",
+    "upstreamSha256": "4d3d041b2a0d14e3f2da437ab17db313d14f36a631af84f8a88565d5bc7b43cf",
+    "upstreamTokenSha256": "8463eac22eb4975471564c9a033a91fa1076df742e5de38201612f011ba0c636"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC4337.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "cc44ca3ee21ff3f1dc30cd7639d878bb269fd1e1a4e9a24d1a3eb33347eba08f",
+    "upstreamSha256": "bdecb4d3ebd484e5dd9fb4f9da5d4942aa8253f87770c95f5144746bc215913a",
+    "upstreamTokenSha256": "78cffe3da4f5f74ae255d931629d2b5f62dad5b94747086231a64175fdeed3b3"
+  },
+  "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC7579.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "82d53bdb15d4b09f67460c45a88727f8122a84f79e52fc253ac58466ad11d0f3",
+    "upstreamSha256": "1a10c12173cdd371f3e41b6a012d12169b05e798c956a02babc9916a61eebe3c",
+    "upstreamTokenSha256": "d055e78002f70728666884013631ba1a402080936726f98c6600d3bfd1b911bc"
+  },
+  "lib/openzeppelin-contracts/contracts/metatx/ERC2771Forwarder.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "7b5a653aee9d79f048f7d1aba2aa2d94f6afd1f8d08e49fa1268328f3ac14606",
+    "upstreamSha256": "1e6659e3efa4ead550f6d3023ed30d56d499ddcb63916893ce7d5dbf58843498",
+    "upstreamTokenSha256": "55aeaea9dbe9ba30d5f31b9d3bac4d2a2e0fd47ad40e5307d5d972acc6996428"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/AuthorityMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "57dd92709bcce1a9d0097900e5865014e6fd14e4260564697ec3070be54d8992",
+    "upstreamSha256": "ef17d67f3913b2b4156373651545dce3b5e1c1661987358e7b7adb4319c169f4",
+    "upstreamTokenSha256": "0c6f754daa8c33e739d30efa7ef2347c6b88eade7af055bb58058f2f99a30631",
+    "upstreamZlibBase64": "eNrNlU1v2zAMhu/+FUROdtHaXbfD0KCHob0EWNph3aGnBYrEpML0EUh0tiDIf58sJ/5AnAC7dPWRpF6+fCzTRQHP3x5err5Kjsbj1USgIbmQ6G5hOvmRJCvHlpqBt0oKSRv4eZ1/zm+ux0ki9co6gu3kC+fo/ZQZtkSxg4WzGkZ5XrAYL3RMuKJflwfF0bgjUtKrdaHDOYFDzf5wwq0hxzjBo6UmObX8F0gPbTlsEwjPojScpDXAmblnSqVMCBcaQHERQkqhg4viEjpRYm6JFKPzDaH/VAU9KuRkq+IM8A+hM0zBqnQIDql0xkM6t1Zl+7bV43CNjtJRY+nRPqBi0estGEsQQCjUAT6KUTaOB3fJrjPi0NHBMaveMJNao5CMMGAaHL7xNkhhKNvSaLKDVGK2g2Yt8XcfDTTu+pCqkp71GkN/gJlHmhxKjuSarq1uKwh3cCQ+yLglfIJpFSyloY83MBNV8fvGfHkwG70OQE9nndp6ouxN8B+LR/Zp3++QbEwFyT3+s1/Md/QrG/bbW2yC+B62J6w8zT26NU78fbBTammWe0thQRiCOorP/BVFqVA8rSp7KBqDtbu9CRCMWGNItprZ/7+Nx/vwX27jgikfyj6cuIP8CNMJQBq1dZvIKQuW5kryTjfU8gzyg1INuf/3SrVf5h6NQJflHfBdR1lnjf8FxCVcPg=="
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/CallReceiverMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8f439bbe79d1a0f10bfa913ecb3c06ba89da383ecbbf205d1382c67b99e5a2ac",
+    "upstreamSha256": "2191b1b5c7fb1bd761d832c994ce5c26b2549447e7efa08c5853a32c5606d0d8",
+    "upstreamTokenSha256": "9003681e41f5506230dcbb70787f3959c4374ad80b2c67754733bcb1044c5b54"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/EIP712Verifier.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "6cca07f68e91b0b1e08a0e2d3e8f66d650c4230405e1aace3dcb8f1c0d01310a",
+    "upstreamSha256": "086f4b83115fc937674696861f43f0541b737b0151b7f58018412a4a4391cd4b",
+    "upstreamTokenSha256": "41c34d90e5f9a3683ddf736f0c6f6a5f9e3deda5014954a864cc1535d68c2454"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/ERC3156FlashBorrowerMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "a179e0a2a961e7849f5074f4f5a567a433bf74846db7bf7e4380f3950a25f8af",
+    "upstreamSha256": "eabad73c5baaed691c687c685e9eacd84d98512724b6708e8c2cc6c74ef73dc4",
+    "upstreamTokenSha256": "ce48ec8137b092bcf62b5b9e11fc1ad178004d563a07d527425263ecfba17573",
+    "upstreamZlibBase64": "eNp9VF1v2zYUffevuMuT5LmSl6LFECNt0zYdAqTp4Kbr9tKAlq5iwhSvyg97RpH/vktKcmTXGR9siLw8POfcjzyHz3++//vZtSxQW3x2VaJ2spJozuDj1e1o1BhxXwuwpGQp3Ra+TbPfs9PpbDSSdUPGwY+ry/m70+kDVIZqOMmy3NEKdR538/Yw4+sns70bz3978fKDEnb5loyhDZoBgNQOTSUKtHkfeoBwUZYGrR3c8U4qm3f7XfQoH49HMIY3Ja7h68X85urmjzNwS2nhKAWoqVgBv6GwZhuEk6SBgysy4NA6qe+h8aYhixY+3Vz/kwX0r0bGEzYJC28QqoAJKmAtemRG0eRAaEBht+CEXU34qwS7JK9KWCCUpBE20i2ZIYJ3NVkHhTAYX7kNrAco/4pAE6iCJW1AugOgFlwTNMKxmRoa9oU1gdStAVHq452CtJUlGiw7FfHRD6QUbYK4BctnDFE4LhTL6GojthaWYo2wJW8CgAvHHEQNGrUF4blgMKCzfyzIBhyWVoMjqIWWjVfCIbQ5Fcyt8rq0QDo8rSQja3QbMisbyOSj3RPHcvcxpu6pxP4YAa/FlrP4/BRifWmhour48t388vbL/Obur4vrL5dwDissCrE6ffEyOTmGl5GO39ck9EnKhRbRiRSLqb0TC87MHerwf9GwIWuc/U/IHJ03ukPBdcjSW6GELvBTlYi2oiE2FfvefYqiIK/dBDyLYZ6wFspjOhtg3JIT6rNvGrU9RDm8FG9FM4wvHJkkEh2ym8Bgq9OUdraGta+WHTyifhDXgu7CegdCxEPLhmuhiP03sDrZwfR68rHU3H2COY/zyU/Hrdzddi9b1NG7n/YrxMfNWCzcf0qVwgkIP/Es5RGwULIAE0lbSLqyGtph8LuXBpPa3mfcdtxYcH7e0untjomq5TDX+zlOQp+mE2hHaHuYZovDymjD0nS2jzrMfoe7D+QGAemQlKwgCWozhfqep9ErmA6lhZXnj+M0DqaCSnxyUpJW21/gPcXZ5W0YLYPVj+w+4e/Y8Z5xoDEQ9rBP8u7JagxrX61og3YWxwqAX0PKjz/QZvegXl8fDIqzfqQk07Sv3ofRfyXgVUY="
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/MerkleProofCustomHashMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "110bb8ffc4dd550bcbb5f6694b20df7d031227c90f1ce1a334461d74bf368cce",
+    "upstreamSha256": "c3ce912881aa5fde215ddc6407f53c6663e9d115095d06f5e6c0e30e4ddd47f9",
+    "upstreamTokenSha256": "92980602acd4a3932c88eafc8829825085c15ae277ff37b11420732a36c8fac3"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/MultipleInheritanceInitializableMocks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "c9599b16c0d7a4699389de4ff1c1fddbbe84467001e8941456da115598dc7dcc",
+    "upstreamSha256": "fe234184f9475fe0fa13a80bca8c853e6763db452eebb9b6f21d2686f3da8889",
+    "upstreamTokenSha256": "528fa19adf1b7e6e93280d1beb7753f093bff6df4e21c4d2451dc7edceb37fe6"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/ReentrancyAttack.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d859a3449774d37fce3fbf6271fedb68862df6c2e0db6db850fb826e685721c6",
+    "upstreamSha256": "5bd96a812b0f7c6ea382dda24470ef2201060404c4fd4e43f80efd966dd135e4",
+    "upstreamTokenSha256": "a135d0fc044f0ab8db14dfbca91d55b5084c53bbe65ba5451a29f26ed582b52e"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/ReentrancyMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "eb19ab002f434938ca78a680988fe73d00af1338372c4682b6318d984353ffdf",
+    "upstreamSha256": "a55d7f1e67399a8f6340b557c5aabcf7af266c71c6069a8f468f0b4487a7546f",
+    "upstreamTokenSha256": "7cb5380cdff564e56a8a8b32d14f18394c2d9a9daac80980c313fc498d1484fb"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/ReentrancyTransientMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2645f5f754cc049d9b62bbd49a2bfa5d94543f3598b56380646bad7538730d46",
+    "upstreamSha256": "e57307820cb44fe1fd43aba7fe340b9e5c190e0a2da652994fe7e5c0f27330ba",
+    "upstreamTokenSha256": "e7d9e2543752a7f0d00342f299c7c5966f525b0edd4107560b23ac3a10986e67"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/account/utils/ERC7579UtilsMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "78a0d7d93b9b942fb6620b97c0068b6968111da5893e9e17d54cba582902f3b7",
+    "upstreamSha256": "9727a2d57d4d9923b6d72eb15f1cd433a70a48ad9940d7ab7babb1339a3daa4c",
+    "upstreamTokenSha256": "153caac2ef46f8dc1832717f4c6343a0a2f1fc45c75f239d0a567a62a8efc3e7"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/compound/CompTimelock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "321716c14f5770eaeb24c6c0c817070178f45e021a4dd2654c61694fc3b2db7d",
+    "upstreamSha256": "225c359facb4105f89a587a6c2512af5a7fff23df850400e84378c21a52bc1e4",
+    "upstreamTokenSha256": "bfdcbe0dbeb01fa05391c8b124589f2a54945abcd5b164f5b519d9b3425a1a56"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/docs/ERC4626Fees.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "239204e6c79be9709d19dafd65e2b1eec454c1170719a2d9734d8fdbea7aebba",
+    "upstreamSha256": "d0021a7320a656e2d245b686e04a85e704d8cfb1f1e2a2a73138dd76cb9bc65c",
+    "upstreamTokenSha256": "44ab16577d6debba91aa398675818296e4f2a17b4f8db8489fbf3f7a19e2a710"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/docs/governance/MyGovernor.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8d6d42dc6fa7211191ccda26c8ee1e126ae53739ed653195b04746529141adcb",
+    "upstreamSha256": "0fa8552915170dd896b9ad0339868d0e19cd5cb4fc2e59899d6b8b16288cd350",
+    "upstreamTokenSha256": "5c9ab02cbfddd6dae008972068ddc5c370f3bb55c0ab26fe319c9bcc261f1cfa"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/docs/governance/MyTokenWrapped.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b0af8fce700965a405cb3e29fd6b4e37a1be9cc5748b9318b2801155bb9d2ea0",
+    "upstreamSha256": "6b810219d9c5ab282b3a83ceee32d1fae5793b81e23ede4eb6cb8b2bc1d50024",
+    "upstreamTokenSha256": "e24d1d12b6bb98724038d7b70f02785f8dc89a2eb73a90b1918cf4116ab2e823"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorCountingOverridableMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "835430cd763e11bc44e1d37c65b0e895899f32cdbb88bc6512330fc9816a5269",
+    "upstreamSha256": "70105ea99319ed85002c100e27cfcd55435d881b411c06e314512cb0d595c781",
+    "upstreamTokenSha256": "9e38c9fa797428f4a47eec09a8d1d96df5c0af26902fcf98cfec05ec80089c4b"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorFractionalMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3e9025d840208c78af6b38623af9bda492dd9bd9edc21bb5a60c2f9325419cff",
+    "upstreamSha256": "78328ba452c5514251ead5f32b58c3ad9065f531d4595a063b838686ccd5770a",
+    "upstreamTokenSha256": "0c2d7dc295371563fc1110c2605366243db996129e85e5a5257601601663af8c"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorPreventLateQuorumMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "1dde99f189bce9820adb52b3384f684b36737e4ecfccb869fa025b8ef7011202",
+    "upstreamSha256": "819393454aecd17cc578b0820e5bc66d48f911b48e7a9eb2585409d95bc035ed",
+    "upstreamTokenSha256": "a49f0ca83d7ca36472eb6327497ed721a5831e4c7dde9b97538b05536ac7b312"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorStorageMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "c1d0b3919ca8880235855b2d3a651ecbab36808304460f381dd1d9ec1a1fdb1c",
+    "upstreamSha256": "e78d01d546658cfd6496e4f333781c74cfe7f0131a136298c2e7b4fd01547523",
+    "upstreamTokenSha256": "39cedcf2634742deb6c5ed3d019a08ebf263e45a6923a5139c15c0a013800f79"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorTimelockAccessMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "32a56804f1cb5c1d5f0a4b4c126c082f85485fdd7b956c1cf2cdf1acb5f7468f",
+    "upstreamSha256": "372f14c06afded71558002492fff04a45eb9f55431174f46baba50216657f347",
+    "upstreamTokenSha256": "053b49552080d1b118326939cb8d8fffcd7461a42052e9ab58254f61c7af3708"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorTimelockCompoundMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "c438f4e73f244963ff0e4a62ee1566399217628c5304b1f4111c92a8c95d168a",
+    "upstreamSha256": "a7ff3bb9974edcabd27510f1486c34ba9973c7cf1ab8fd900b407495448ae8a1",
+    "upstreamTokenSha256": "b7462b7831a2cca8569e80bb627e1169e9f53006acf6f40c164e263562b06da4"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorTimelockControlMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9283060787d100a9f372f7a8ec89c23e68c9f2bab1663d98ffa66e7f7a4edd15",
+    "upstreamSha256": "8685efe7fe1a5089b9396e37eb46021a7b987d9877564ae39b411ea8ef670ff8",
+    "upstreamTokenSha256": "d27603a00be74d50cfcef1ed4e723a6dd5d7f26538d1344a8b1abefe02b8aea6"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/governance/GovernorWithParamsMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "c76d9a50895fb58586c135096dd07a3eb7f0abc00b08e0341dd963244286b4a8",
+    "upstreamSha256": "e319bd356631aae17947c8b02038e30756d44ad6187f607d5571ec66851814b7",
+    "upstreamTokenSha256": "cfd2453eabf3fd1bff4f1b5a5b556688b021ec8b2a0b66572220ea37b2293145"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1155ReceiverMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "517b98edda5547cd934b98e21d68a1e89195f1c0eb0c24b1825638df2ff385e6",
+    "upstreamSha256": "02fbc285ea2ff6ade6221d5f983ee8492d4835945efdc20749973cbcf6e48a20",
+    "upstreamTokenSha256": "2d872b26b3f3579aa650192ff81aed4a5f319777b1e68f35248e5ddf38c8988a"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1363ForceApproveMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a62af197a83fda121b8dcae61e04b409bce03bfcedaef1fce81e07996f372ac7",
+    "upstreamSha256": "ac144542a57c43b943641c4071dfeb357ca9334330a4eb5e2e805a793658552d",
+    "upstreamTokenSha256": "7f22109875a83b455727d61cbd6e0c5178e7222b7da49243af1440ce5aafcdf0"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1363NoReturnMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2e385ae93aeb57b08b16138dde1afd782a5389823f2b00b682ed8c978e5ee3ca",
+    "upstreamSha256": "8815ced1275f129cc4d034ee8f3e1174d0eb2b6d9fa787894328696058f3c8e0",
+    "upstreamTokenSha256": "beef991449ab5b53e2fce448b98c620fea17fcff582b86001d64d7ed1c898cf0"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1363ReceiverMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "49a211e5af4e6cc0c9622dd1612b649ce71d6ea505451378ab6d30fab2909a6a",
+    "upstreamSha256": "6544ae62131ed094dc031d8b8404af47d20d2c6a0a533257b7b480c16f13f4e7",
+    "upstreamTokenSha256": "fd27479abd13654b535ee18c2fd1891833bb9f99f5ab11cac3d171f7b4e7e819"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1363ReturnFalseMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "6f5d9691979cf8edd58b25d1169813fbb2b9e5538bfc2a3ef12919a54687582b",
+    "upstreamSha256": "cbb3ce37a6f80580902d286d040614ca0f2ffbdab0228aa8d340da18bd7f6b0e",
+    "upstreamTokenSha256": "a69318de418bac67f56368a354bb14b6b6b1c07f02d885c08618ced849703a1f"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC1363SpenderMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "54f8be0e0b248bdca130e395dc5104bb86241c7d0f9d183028aff198eb5e9eb6",
+    "upstreamSha256": "813dc538ff5c6533b72488ed1f7b84f82eca98b8c49a1d99e9cce67f7f637985",
+    "upstreamTokenSha256": "b2a9cc8e414bf680e86bbd110956d24b6bb6f10568358d5863317bdaa3a4626e"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC20VotesAdditionalCheckpointsMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8234593556efed07403a50eec153da376cd2624aa5033033370f2d7111766c5b",
+    "upstreamSha256": "a5fff113054407a793ffddc895f8199b8737905ace0de61370743a813ee40fd2",
+    "upstreamTokenSha256": "3e134b0d38b0f310fddc05e72b232c57b0bd8ee3a932069e4ec14145fd749fb7"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC20VotesLegacyMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d9dce68b7f3c66e124d35c71d7cbbebc4264ce5c3a69d792af6678048fb7fc0e",
+    "upstreamSha256": "464ae785600ea208da5763cf53f21b65b1b07666fa35e97e4610450c528cf234",
+    "upstreamTokenSha256": "7fcada8bcaaee60f9c45df5e5069d8f7bcf5d64f1a3fe925f84dbd635cefce8d"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC721ConsecutiveEnumerableMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "5ead826104f6fd44c8d081c28d0bfa265ca641174a65503d02a4d5fa369d9496",
+    "upstreamSha256": "cd2848fbb5be2e7f43a9f158d962ffa11eb6fc0f1f4e404cf0456d33c70d0c2c",
+    "upstreamTokenSha256": "f3ba951cc82620e5e39849b20f669b53e9fe01f52a517c7ef2229c9f39569fa3"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC721ConsecutiveMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9799583cfc0c3adecd68fd3f62fe6e7b0a84400aabac6f457b18134b4eef8b29",
+    "upstreamSha256": "e62b0df3284a9be5ab2293d2590f04bc8cbf2e1d9f333e85eaeb926cfa96fd16",
+    "upstreamTokenSha256": "51f6cfcd24672d1d9f32d51f901cf3c1cab477b060952b01add6077ff3403b1b"
+  },
+  "lib/openzeppelin-contracts/contracts/mocks/token/ERC721ReceiverMock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "dcba8d9197609dadb42247fe739a98cffb7ef50cfdeb4f6d3322fbcee253358b",
+    "upstreamSha256": "d65c0b5b4554e708052043ca4b1e35c668e81927f8d085e816e47c123912e0d6",
+    "upstreamTokenSha256": "bcacaf21caf8b33d872ed1152113df2f2e93ec032dd726e0aca51b4f17f48207"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/Clones.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "af7216a820728b4d314087912f2b664eed19505bba7768679b1fe8cbd887d294",
+    "upstreamSha256": "7640d41fedd157eb232bb96b5ba6a64b97500870f81b657d25ac0e79e8b2710a",
+    "upstreamTokenSha256": "804971359eec5733c982af581d241cf456481901d98b97b25e586332fca03264"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Utils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d0ba47de9bcaf9758e0f2699a8d3f8c16201fcbd1602271811064407370e68ff",
+    "upstreamSha256": "454cf052a9513cdfd7cf2e3227f3ef1a2e3a2cfd9ea4706814f602dbe4f19d8f",
+    "upstreamTokenSha256": "3d02baddd48b6f0b01e99588cbb1ff9a715d475640b886ec1c60c640cde5cfef"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "1d8a6c90de49cfe8ebf1f3d03f38e6c5be9bacfb33712c7c5682f1d9750f68bf",
+    "upstreamSha256": "4da9a90b1c8b45fdab7d73d8cf81f51cf7d990657ee4e3f943492c3bf0e4c2f1",
+    "upstreamTokenSha256": "58214562dce80a613dab3add325f9929b5b3a71f5fc5492459dc2fb329819198"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "eab40b99834f6ff072f30e373b3a99cfb8b28394d0132b8fa472e3d8689baf8f",
+    "upstreamSha256": "8391555685fb89d92ad37327d21e098b242058c10ded6398447b4eeb1c908ab0",
+    "upstreamTokenSha256": "e8b64c29652ab8fcf1949db3faac4892f9f5202689476e99591d1cb455fe4853"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "49209fffd066814debec42cb1d22c0cbfdea1d6a259837cc63ebdef7419d8626",
+    "upstreamSha256": "a8b7eafa0fdc7cb5a644c8c61a8e4c51e031d5e1e6f268f72dbe18b768ead56e",
+    "upstreamTokenSha256": "9833f50ebdc5721ed14981e54e4da4765fe7efa578c38c2b4de616285bb06c20"
+  },
+  "lib/openzeppelin-contracts/contracts/proxy/utils/UUPSUpgradeable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "0ee3c26ff07f70493baa391e990ab259f8090edab48e368d717e687c3917cde8",
+    "upstreamSha256": "216b2af9b12893922db1730981e5490fa65086dab8b0e24a3c76dea4895f35d6",
+    "upstreamTokenSha256": "2a76596882a5527267c058a7655cd7dd5438759b15f34e829dbd3605e45d9b06",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "829d011ba03b9b5dcd8c7ee15cefc12aaaf506fcc42d96ef4aac1e530aaefb54",
+    "upstreamSha256": "560b187bb02cf3976455905e4f5bf6311e340e55e1e346a41ebf865e1c26b74c",
+    "upstreamTokenSha256": "636b3b19163d268d30d6bd8c504f6f79a974f5b8f3735c365d63e4a09bc9b0f6"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "0c90ebc703b6211611989a68d66563eb3637af1e0e3d9df0a8b67ceb094c1659",
+    "upstreamSha256": "587171cdcc6eb94734c7893c0dea36bc0f2784f1c0186f2000e6be9a62fbad4c",
+    "upstreamTokenSha256": "5610335c42eb005f92116f62b2455dc5f302f1b27cc003fe10dcc9bc43759370"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "57528c0a132ca5b145d40ef6db9781366ea30e679125fd4718c822cfaa3d22f0",
+    "upstreamSha256": "b3da220debe08c174f8848fa4c41cccf3d49e4e23c81d76528df99fb759f4937",
+    "upstreamTokenSha256": "dd8d776a89b169971b7adfd79f78aa9ae8fcb7fce114dc619b387239a2226497"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/ERC1155Pausable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "7fcac7b499bb4b4bb3e538fc82fa1292132626bf7d1d892cb73e791bee776c16",
+    "upstreamSha256": "6bfd11fef86b179cc4369ebfc54926757d10820dd5552044215dc0213afe4c58",
+    "upstreamTokenSha256": "1bda01e24d206df13f47f71b83cd19b73ee4e049e9e2ae7ba464d889cf9da30d"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/ERC1155Supply.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d2046ea0df034adf340f8e2b85c124f12acc41da660a997aae8ecf61c49ebb39",
+    "upstreamSha256": "d34254efe73662358ed7f40a9bb4906b6216708bbe334aea360b41565ff0254e",
+    "upstreamTokenSha256": "5d1e8aaac506d394b4b19529b204467da6767b8daa4750ee8f4ddc90838cfaef"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "0fda7f5dea23bc7e3587f6606a73625fb680074e39c635e8a29f55ebd4bff0dd",
+    "upstreamSha256": "8e2baa224856aa31b2b8706b2a9eb9c43694a04cfd02cb7886aba2f88014b1dd",
+    "upstreamTokenSha256": "521188ac432a034384c95fa39f80e7cb375b577f1ee1361143f9f84c6ec0c665"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Utils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "fb242770656c04b33df59f2e2e45bede14f08378e93922223889102a4f7a50e5",
+    "upstreamSha256": "91338a168b1bbe35e59d5c21b259024e965a5e5a554a299900fa7a865bdd317a",
+    "upstreamTokenSha256": "fbe60da570f5d9faaab8cfc28d1b74dde5d6d91ddfcf2472a41a550e33f7902f"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC1363.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "e67f88bef7bf95e183f85af3daa12c6f0e4d39f438b94d4300fe4a199b9e99ac",
+    "upstreamSha256": "24af6c1b39d99cfc9359b9a10e8e74e90b23b25a70cf95332b9e7b25e6a95106",
+    "upstreamTokenSha256": "0f40f883fdb183acdae41a89d0c1339a91ca347c7e920c4c1c6bc32f6b71840f"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20FlashMint.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3f371ecf7b9504e7bb88bcaa0e12afd536de5cc21a8e0a5eef2e06e5d613c6d9",
+    "upstreamSha256": "50a9e14561603af062887bb3820c32cca62e9339042d480a8bed92b637d93ecd",
+    "upstreamTokenSha256": "4e0d5647c1b01e6d1a1bdaa0da47315057a8a9ea3d98a84e4cedd5a178789ac1"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Permit.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9aea7996292f030d04711b5d2e4f56372f5a88626dda8ff344347e43798a9cf4",
+    "upstreamSha256": "75f9f66db047b1413aa45538a53211e7b20479d74c3dd2657335bf4dc50b8811",
+    "upstreamTokenSha256": "cde85cf811a8000bef709b8f7f5a1fef12788031dcc3745120ac8878a79cea40"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Votes.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8caa8ad16ed9c1dadc8adb7fe216b1467187d7f4591d4b3074f005413c12f102",
+    "upstreamSha256": "f2a0c9b7b4b67cec3ae19dad94454da68da553512f22e4eaf39c46447e11815a",
+    "upstreamTokenSha256": "2c65c07206c1314e5d968981b23a4c7adbccdc6ecb68c5f252560280efd6838c"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "70136ef6035b3180d357df31ea67517d261e6f00d3c1dfc7d8cf21a473bb2d70",
+    "upstreamSha256": "556f6226a37eca849ecf4801ed5571e24da593bf9a9ee6092f1510c1601b2468",
+    "upstreamTokenSha256": "8948fa320f31dcea8ec4b987d1241b843e11728a22e8f384d2faea1342e77fd9",
+    "upstreamZlibBase64": "eNrNWmtz27gV/e5fgXpnttKuRDnpPtKk2dbNo+OZpt6xvd1OM1sbIkEJNUloAFCymvF/77l4kBQlOU7i7KzGM7II4N5z3xcgJhN2/uPLf43/LlNRGTE+yURlZS6FfsrenFwcTCbsdCGqf4vFQhSyYi9UZTVPrWGDghvL6kXGrcjY8tvkUXI0ZAOrrkU1eXX24vHRRNxYEJWqMvTgm+8ef5cYVQwPDhaaz0rO8ENm0q7Zf46SJ8njo2cHB7JcKG3ZuxNHYcT89xthOfjwEXM/b1muVckOk8QzIqqHz5q15zwX/Xm1lYWZNCO9FScBXmeB/5OVFTrnqTCTk44InaVvuJ1vLfPcSgxNaDwsOZh89dUB+4r9JRNLdlIuClFC2dxCQUzlzM4FiTcmJuzwgvQo/wfV/pPXhWXnllcZ19kh44ZlIpcVhmRF9ObWLszTyUTIhUkEyGhRl4nSs8mrkx/P6bGj+TYS/yXBKlp4MZeGNUZivCjUyjgcJQSX1YyBJ5vWuqL/AfHQzLkW5pANtFjgH8AHitrQcIT/+AiwgEECcCqG+AEW6ZxXM8FypYlvXWVCF2tadciNERYU7VyrejZnJsjpRH+XiYUy0t6O2DuCRN9aZEKUtw7aO8J2y1ZKX+eEPfEipcFJvWyZIZ4deJFFwo6rNeMZXBDi86JVhQHqtKgzQOCFAkxpwaQu8DPPBQgTtUYZzuVZVyPTNWZIx7fBQngrFZY2Urulq7lM5wzAeQXGkBmgQahZG+319sXxTxcnp//4hX48x4e+T6DfcoEgGijNKsGhWP9g2HrTklzIjFhQJxhpwbhlcwmNa2muybhTQQYxVhWAFM0BxwaGuiIPIG4raeeMs8MMCiOtkQhOJMcC/4GqrPICScF70kIjsxB5hDvpK5gIf0uupaoN4F5XalWRX3MW6TII4+ngBzHm1vL02mmRnNaQpiU8FgYEDzVFMBEXU8jFgs/AxocNJC7UWmg4BZSLiZbMx2dcVsY6I0XKsFnJr73Tg7Uk6sQ46MyLUKlqbLVcYozxUtWVjZHrLDpipoYlnRa84CWv5KL2YkDDqSoFOVcuuJHAnLCfodBM8xUvDCaviaORpSycHaciOJz3qVa4n8x9RIJGV6Io6LuuxM3CE4pUKDJnohIaskwd4yWiNl/HYA7yaZEKuRRO7ZzShSczCmHP2UpzFAcdpEa6VLp0tjeCpXORXhuvFW66yWoGuetpAoVMciHHJIZKVRELxRdCp/QNL0QGHsPs4yk34m0YPnOPm0R2jnCFC36T/HHkFSA3sytSh1ZZjTROMZXLWa05tM+WUtuaTOnC0TmXD2ry6rkoFrD+UhRqQdou4RIz+LUXlKIm8UlUsKvLTKSyhA1P8xykBsMrMNIgtFDIP0SNU46nMVI7qTesaPNG9BG7EsJP6eRJh/D3Jq5yqiS4bejFkRBggRkeKAxBWcifISQ1CQG3jdK3Ivf0EZA6+iOfpYgvEogo8j7VEDJtsic28O+5hKIp8eU1RSuEXQpfXJyTOU8dQRZerA1wm7mvQdwGLeXEndgGiQboMhCoFEbWxSNcJ0exIXsSaSZzUrYnDLckt6UxiJfyha01CVTUwtfsEsQlfAXejLkxP458MoJWGt5BE7TQJ8pALCR70dfmAB7a5IaAhewX8hvJYNP5phrcjCZOXUA7F/vZJ13khBlAej2MOuuaxKJ0Rp4KtiWfwR6oYKxUkJiIorItnfNWpDmopVVcwt7QLFiUo3GBvgg86PeKNTU0LulMqZRjgN1okT8NoZrwTKVfNEl77LG9pXak03GAC7LdlFA77ZB5FkDCfQVsDN9TZ9Zab8ApUSEbwtuLIVtwbXfZh6eprkXman+nRKHoIyRG5CVt7JB6tBQVJYhCwfmNV2/t0qwFM5AQN9J242EHSopIHzu+ViL3phxE3NxcamqYyc8aaqrDGu5GKSoLCCj6YBAtKY1FEXzP7VGRphyLlgRxncoZeYknkrCXbQKjyc7hFKMghNqcGQJpBOaYMijUN+dLifr73xrMKgFEmKKwQMtMRLe4ukQmJSIX6twJf+Wk7zw+doq4QtxXKTmEaZxAsQJ9SuVcc+RrBHPhUmvvUWenpxcbbtX0rmxWA4Tzp9gBTQ741Pgeq2m2Qpkgj+psJNyjdwcMH1+8qDmnppTVqBCPv/0OPToN+k0HVfAlpUpZlrXPL5fOuM88BSx5smtOGzAvQ0oOZF37T5+wBTi2lho1r9/YZrhwDfnXxaprx/lNLMeE9irUZH2VBIIT9w0LYTQI+uomhelE9obfvPS0B2h1YSgTS7oeRbkDw/Y3GA7vg5qacg85FpEHgvwGhO/A67l9ON5V6LY+i5pjK9fgRlf7EEr2O57PouYzR3of4A/Q8rmwO1uWdg/j25KScgq1tZUPzDEK1wL1giKnid5B2Kh5yOPvv/9+uCkOZiLi69QqPQjB6rhdDkN402cwVaqg1hNZPQjxxE+LcTlkz9klsvvfhD3uPh8EYs8aWjuCGmsDbfbnTbLsKXv0pLPWK+J5gOgHbu+0u2vGcmHdXiL4aafBO4ZLoBRWod6h+OV4Ti1YJtOw8wpllHuCmIA2jA4MmEGnwFZ8vanRmKR366On45j0llKsAhQT1K2u92h6r12mawJcCrg3Nq5VquCZXQMF34w2SQw1ymmK2j9oSNKHT2Xil7+gsc2DoyQqb8QGw2GzrmNh9AODaM8vv+wDSbAnnqFW/PCc/eFxV5hYCSg8vCbaRQQeoMAapAY9igAS1g07KCKSLVJ/es7seiHcmifDhCKxh4I+wS0GiA0R7LBFqs/u9mD7v0jHudWIHQ3vdNoGJJ0qUDzXYb9KRyuhwY27ndDEw9GsWsS27Y59jk8bkd2h0nImsVU4DK5Phz3oHMEuq7XrymNm6Byq+R6vTUQnoe/UgmeMWiO/88pd7zsQySwZ+S7HM/XRN8eOgHYxU9qcpVhKMq6FHY7o1MLvUojhoycECi1aSN1hc/deOQO3yPRciHgIGn14HOfe7gndOD5AhNbTQqY+QGOPGju4wc4z1WEbyN7HOu4V3GFXEvyabW19+74SC4Roz1nHTvzbZEsE93wP/gZfyAg7EMZc4VPuvZBYZXnhW9UdeDqj70MVo3mH3hyaZMoLOhE9zaMAA/LC4b1Q9nrtHUh7MwabTcfHY+/TjU2MO9c+o00g3CF5XSilP0ySvTrvzRhsdiMPIEmgG7ubj5WkbBrrHUKUW133RwNv8j4NU+a/JzhqoXcj6zbXvzqs2CXvhra7h344o7dB6Al/kvl997xbkF2d9UeL0Ud9H3x00AY2+110c8JvNmEEmHu8uTP6KyeKF0IWHyLAHX7fm/Erm+JDBdnr9Rvjv9m0ne0NiGxnJIxY/xiiI8v7xejsnb0A2BV0ikNDc3MnEk4mfmiX9dv9cIK3/7CnPTSJcrS0nnV6/i2k4YjheT9B8P7ay6iwy9LMzumdpR4goW4zDi7w7KBvXD9wr2y7p5htx/3D2es8KiKWzD3GCgr7oV1zb2NtkB01ErSE7rQUjw7VzYKmv/DTzeQn3MdMq/1JbrU7u22bq33SL5ofHW1NZu2WzweItU26nxxpbfOzFWqN9vYZsYfgAUJO78vzeleC/2x27EZhKC27rPgJQdil+skxGIhtR+GDWXB3NG6cyJzQtSW60eKLp7vd05hv4F58xrNv1RRod7XD1At3r4kOk3UoriyTQElr950Z3r357NXqhi7dDQo4P7Qr8ISTsi5eyuXA7dLPgbxYY5f+NXt0xODSWwcTo952HhNHLZhPVWj7Fj22bQ+h0J174M+gUE94Q6Gberq3ju+n0NBUTNwLpFSVJVWIcI1rn1Ky3mssOgPuppn3v9aKrt5Rk9dQq4/JhM4Hw5m9f31ILyBG7MpqXplc6New9pV7DW61f9dKNwUEnS5W6Zr99dXr07NX7rwvrmBzuiFTmeZWVXO66BleuWtgBuGDtHDF5kpdJ+zUv+BRdJ8PBKrMv3H2c8/CpRw/eRTuXZmIiO6t5dbdyWlRjLosSXdm63aHv+Nj6lL4u2qwrEzpklbSWdsl80LRPTkKh6dsJZqXxZnalH8qcnp5tfIXC5lRHjCv1l3N+Rt2XldxSU9T8aKObok7YemaYrOgeRuvPT+6rNSKRyfHMqNLgFZ0xaJ7UaTrcSYNvcgdV+LGjgtZiQ7GcaXGws6bZZ0LpfjvouMh4Qxy1PdSf+gX03y3QJS7esFu/heltDFwBpHsHW3cHeEXO41JeLd4zwhsaliDqReLW88beFsjvtztqaejPb2Se3xn/FIv4MGw3z2PncdmI3Bp6ILlMd12pVOVWPijRs0dVf/92eGOzHD8+uLV2cckhs1of09q2EgjuzJDJ1B+A6mhzVNTV4fukRqaJRvR28b81L3v8pdxGuq7M8f7E8MlUdvsDTuusTv+m9jvB+dWNDcd/3Y472sHOx7ZLY2bZfg+jcCuVzxHkf7twf8BTS+V3Q=="
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20TemporaryApproval.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "95f19c6072a96d9f8471b3125028b08cf189fff5f311276be2df37b52ff3ca39",
+    "upstreamSha256": "362c2ebc6204fc35a0fc941145a41d0d347941d97bee4681162eb1799bdd6050",
+    "upstreamTokenSha256": "8dfefd203d57123d949f9efa8634d6256796dd905012022c9043d431fd458c16"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "02ec90351f243e373d27a490e132a0cf4d3b36e615c9dc8bd072c6862ce412a3",
+    "upstreamSha256": "8d3062e8831a07bab894607a7e6990f0b336024079ed5baaaae1f2b103e292ad",
+    "upstreamTokenSha256": "cfbe7dbf33984420d03d614108497c372f55be26760b7489a905f63148fef124"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "19556bdf9215d3d19890fa6306bba9763f843ada3915f255050daa9e787a557e",
+    "upstreamSha256": "1c470376ac5b8d29fd44139aa0fadf4904ea161ed460050ffd7866e0eea1e982",
+    "upstreamTokenSha256": "284efd2c9adbe451dcf802bd05060841c3afd9b28aa4fb30d30958553686f252"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2a5cdcba87e5cb5309d6ce3ccba1dd164a14aedfe7a067a85ebebbc9a46b46f1",
+    "upstreamSha256": "2eae310f371d9107d81d4b1285f897e56074465f7caeeff90b5e3e1770dda7d6",
+    "upstreamTokenSha256": "4589a6363c6cfbbe0c0b8edb2ec021f148e2fd3e69587d0d303adbac3c8b454c"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Consecutive.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "5aff8b3b61d5974042d4f6464bedc8126442d7d9a5dce4e362af07746878fce6",
+    "upstreamSha256": "d500e45a69dfc5780d90b6f07e99ea62ac8f07cc69e9fb689478acc02285c93f",
+    "upstreamTokenSha256": "c14dab401f2b3647626764dc0e6118bf9a31d168e1d0bdb7c04f0d5091023f11",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "e1ebb328f7bd1903f602ced8329fc0d63fba35f6776210b5c89886ebf046e720",
+    "upstreamSha256": "26ef6fbb12f45741f07cd0f00a147c34d02a19f37e5a9a329e8c82986b9ac9b7",
+    "upstreamTokenSha256": "b604cbe8c8c0f9a2da2131f33bc0c880adfedcfe5d613a6083bbafec2bff609b"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Pausable.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "76bb73c8460f19c8d8d8269294b5f6e1fb73386296e1d5524fe28c1a79162915",
+    "upstreamSha256": "d773f8c1ad695bad18631cec9f3ddfa337982a75562bb061f09f7ef4f216af7d",
+    "upstreamTokenSha256": "27a608e318d20768719571109e0422495bdb0733ce6ba79b373c0e9263aea4ef"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Royalty.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "779c702693aa27651e2e677ef53cb5964a045aa31c6e2f958886b60a8c80cdd4",
+    "upstreamSha256": "5728aad19f726cd62001e01fb1c8857a166b24367a79e93214194bfa0db84d95",
+    "upstreamTokenSha256": "dad326aa41e8aa5b23234c516f5569ef9f60032a675f0c35148fc08e9129f3f5"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "5571fac2c95d0a756398705bc9c2161fb20b16bfe88a86089cca5ef2fad48bcb",
+    "upstreamSha256": "ce36b2e59527b8a4890c68ca7f1e6c1b05661c2916660f63b00502c1394861a3",
+    "upstreamTokenSha256": "38a7b95dcb5a5be6621fdf027fe0846fb8ea5ceaab8f08f059c8dbbf7a303b64"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Wrapper.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "dc73149efb6bcfb181d279a9f3df407bdc8fc6a9ff5f76a2c0479dd5c3b9b5ea",
+    "upstreamSha256": "e646308e346689526041583bb2a426c5e95fa5bd9e77081fdc635b449abda505",
+    "upstreamTokenSha256": "bc9d4470f17e16e7a9ed4d567285dcc8b1b4d442f4b7f75b1be4c790f62a9b3e"
+  },
+  "lib/openzeppelin-contracts/contracts/token/common/ERC2981.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8ebe451052b4a9d1a8ef3628cd4d437fb2f5ee7d26530d2013bc6f0e1f3aaf16",
+    "upstreamSha256": "e92ef291a91d7cf4bf178ea19abe680d2d9970f0c2cf24c57f01160639269e44",
+    "upstreamTokenSha256": "b1dbc4c1567dcbf1c284b9cf15c70a02c1b60ae0edd50796fcb315589d269b09"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "554599883c4a4aefd00213e37316054643bcfc5903078ec00f521f88b9090de4",
+    "upstreamSha256": "2395099726e6c215641a5857a74f663987f37a3ad8a2932a9f3d8ee27fb11dd4",
+    "upstreamTokenSha256": "6fce70f707b7d41afc8804219a9045b8e74f6436af7ce7800262879e570548ff"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Arrays.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a79d0872a1ed99ae7ba1c5da175a4c2314a8049e7e7aaf636f7c6e8519721a5b",
+    "upstreamSha256": "ba9eba95d720954becedb85977a4063ffebdfe56f2647705ef8a04945fb6fd5e",
+    "upstreamTokenSha256": "64502488444048b0f786ddbad5e30aeb7bec155e01b7a7df8a10ec8f5f36929d"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Base64.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "cef575608f0536ce2766932ced89d3b3b64f37535272ba268fc0b61b273775cc",
+    "upstreamSha256": "c3738c1be3c48c5f78e311119a74256f2df0336951369b1d8290838459f8b4a1",
+    "upstreamTokenSha256": "70082e734048c1b2dea70c1789558ed54fdb06eaa05dade7e868c11372293ccf"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Bytes.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a60a3afad5253237d173c5326d13e3907fabd22b57c40cac04b67cad53a25f60",
+    "upstreamSha256": "bd37fcf26006ea494a6f9c07dd2a48db2da3fcddacf856c8416c9c45711f8a2c",
+    "upstreamTokenSha256": "500529fa3ee91db14331c5abd65fd00a8b4bed4bc61db5ee4fda4e60e3ec6fa6"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Create2.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b4169c1a98a7bd5b112dc42f558d9c66bb8327ac595588175907f0aa34b77b1d",
+    "upstreamSha256": "1ddfef650decd5f4e4bb57ac5f42add20bf90bc8ff716de27b8f22619be332ef",
+    "upstreamTokenSha256": "3771e6520f157ed58a156b553f02d2bdfcc7e2592c94e49a953b94480997f48c"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Multicall.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "ba663aa3218bb44c2b2aa2cd7df89aaf1e16f32a20ae8784e75bc311f3029033",
+    "upstreamSha256": "1f9eaa29689a4810ac91bebef305b700e7d0b387d12de41caa6209ed37435b89",
+    "upstreamTokenSha256": "49796839c61a405a449f450f639172ae68a2af076c6d9710bf157598380c76ce"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/NoncesKeyed.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3c484cca77a65404635431b391466b2d7515feca79e74423a649cb76933094af",
+    "upstreamSha256": "ec835ccacbd09964b5ec4f46da1069e4bd6b943e5c7966ba6a4baad642ff62b1",
+    "upstreamTokenSha256": "81515f19b3248b7a92a02c1d5aad1a702c2347574af8c5fc33744f2a72ce791d"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/ShortStrings.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b0cd65b5d622199fec196746f5fe66cd66a3253c089125eb5e052138960631bc",
+    "upstreamSha256": "c5970e9c77c9a797941fcb9ab8c9a5d0b1227c610a919ee8a04ba061e6881873",
+    "upstreamTokenSha256": "249ce35bdfc8a8fdc2993c192af417cd9d3eeb283eb6517aa225332afe4310e5"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "d3a770c80fecceda90b7c09bca959a425881f5f9353fe6ced7bbf3accbcd7ca0",
+    "upstreamSha256": "1d47b183ce3217de32c41cf6034281a783f41380ca99d1ca043509018b656165",
+    "upstreamTokenSha256": "1d23e437939ee5fe7d0cbfe351565c1d941a0d0f5ea66217a4959ca918e1f17c",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "77a4dffcc36423f9ae545703fec795a09d9aecb38de5e4ca6f8e5c4f2b5701b1",
+    "upstreamSha256": "0964ddd02f4a7a8cf9ba130e3aeead588ca3d425d5bc13cc4221358c69108ed0",
+    "upstreamTokenSha256": "738f0cfea63ac7caae03438cf8bf22c6fef7a86a261eea28b4271ff133dc0856"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b5c6ba2a6bb578e6495ae5e04bc2cc5e1d709b131d65911962eb08ce1c9f0493",
+    "upstreamSha256": "a174525c74ab5d2f066206ec9cebb6b3c618384c53ec35ad224ac1fbbf06b3f0",
+    "upstreamTokenSha256": "41093107b6260ea6631ee536cd190cea7ae5094976df5551ef2a641754c06f94"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "4c8f632fd9e7579c53f1719d6d8f872796307de2c94a19151744e7533ab4184d",
+    "upstreamSha256": "93e4c09f9c65d37a14d796601b67a67fc918e16957a6328261f8635e136adf76",
+    "upstreamTokenSha256": "cca6de4a37e14d6f5da2e70d00f9af620d901f9e633b4240f22b265068246705",
+    "upstreamZlibBase64": "eNrVVm1P40YQ/p5fMcp9sWliJwGuB6dKPQFSU/WOiNAXFehlY0/iLfba2l1DIsR/7+x67TiACieulS4fEnuzO8/MM8/MThjCdHL8R/8XHqFQ2B/HKDRfcJSH8HF83glDOC1Q/IlFgSkXcJQLLVmkFXgpUxrKImYaY7jZD4bBwAev1DxVYSTXhc6XkhXJOvyISrEl/sRU8qv5N1B56nc6hWTLjAG98JjrNfw1CN4Fo8H7TodnRS413E215GKp7mEh8wy6QRC6FWOhSxvDnZ0O7MCPMd7AlC8F06VEyCo8SAgQjD9cc1SwyCUUMo/LiExAzJeoKAydwxwhyoUqM4pjvoa7k6Pj6Yd7kBjlNyjXQOcUGadTAaEZwPMEIeVzyehfMnnDY7KfoU7yuMJZokDJtAFilR/5gp5qz3TCtMGkrZl1QSdo7CZaF+owDJEXKiBzKLHMglwuw5PxZGqW+8OD4cXJ2ZH5vQIm4pec+X44uqAXoN8rA6MKjCjHETlIcZugwk4dzsNkwV0H6GOZNh/H9hkS1UIZx+Eao4hdj/bfOlJtrAKcl5Y7YpZ0wuCW6wSIVEXAtb3ZYLW3PwNvVtB6Llj62ZyY1WQpP3A76wOGfYfEFUQsjcrUinBusoELvqp4n681qt0RzLJNTDPrQgPdvVwND04caVZCZMZRcHgpdkfdWUUyHTVGTbgSVZnqAMYmhZLeilxQ2m1oNo+VbZt1F/ttggJKVVtoUqaT4JZf8/Bvirsviyj8MBm/oVXLwMWsfppdwc/T00/9s8mRU9lDSj6dnp8cWmK2gy2YZHQCpWGKC40iJncqzW9iMQmrI2Qg2W0j1DZZTZp7wFJyolwmxM26ofmGpSVVEmWejCu2wHRNMZu0YMTowQIuOCW4zt4tT9Pa+tw40zde4KPopoiuKvuuKO/rLaH9XZQiMlqmyCiZVRpbQvZqF1vc+JYOabwpTNOQTtDN3spH3+nffJhSmM0pKq+bYZbLdd9E2W1vMZ9M6VyiN1gNBj14XmA+UI8lPF4Vk4XvpyiW2jaNlstPowyj3nZcZM6sgjd659dWN/bMW1UkW+ZcRg5/2KTZRTBY7UbO6G70b/bAOuPDd213zOJo4DdY953q+1ttKgKYnHNtW2Vdal/WU7pEENHnucP+t9Fgvk4JQlU3dRaeq8F2ZVX/bWl2o1S7P6ALla407zn+e1WNefUsofPqqc5IUInb95u68v33/59sBwOS7WZD07SpvXJazuVXka4BqHTrBHtJwO6yM3HUsI1jDTztiWMSpQoMsHhKua/QzjH59Tt5NXb4v9WwVkQOecOFy2WtKxPVl4uqJSQ25wGKKI9xwqJrjL0EV93hwWfiptdGtUCvV8V4YmYz0OuiFoVXK8UJwypiOHt5zu2ozCjBeca4mKKZAKqsUWZpXWlZRtpOB71tgZCj2XYnc7oYvrhFVZPsVmciiHbPetmw2jSmc8OM0cTjDkXXsRlvLJeOyNcIr0HaGhgesNhrhp0Njf/dIJGihkJLcylnac5iukr3WldpawqgXT2opTrsPrmHaqfaR4IaUW97ENpzZ0bmTCvqZ6cHd25v9Pjyv+/8Ayrvj50="
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/P256.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "479a450ada76962668769ec34bc468e9a96a5b739f538891d802b3665ad5929b",
+    "upstreamSha256": "b94e697867944db51efb2f3d0d1ec19877ddfae7066cb5fb7387945e2cdc852c",
+    "upstreamTokenSha256": "60dd056218896a8a037043578d691b4a8bb3cfaed6ee406648df7a0bb1879466"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/RSA.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "7990fb0b0bc5781e546258a67517e392c06f71cae8cd89ff73bd41c4d44b52c7",
+    "upstreamSha256": "036c1fab2a132d7acb7fa0873812f2ad22c873d2efc91032b8ac7a1fda5ff476",
+    "upstreamTokenSha256": "50de5a7ae3c1e3b4bedbf6c9596fca9ec73aa0b7fd9b6f9f238ffe934e9a3cc2",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/SignatureChecker.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "63b307585900af5db3bbf3bf942d10de82baf58ad694f6e344fe86bf9370f949",
+    "upstreamSha256": "37a06b31bce546a771a6450bdccf8f88ab3fef1d91e1aa5a2e10324cbbd9b2f0",
+    "upstreamTokenSha256": "a74cf64e0c6cfccc3bb7a829bb900ae0cd79b5ff3463cdfb73b9760df8892d82"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b3d17228cb9f5b5d1dd2ab054e7ed4943c2da3565cc4b7c09d5be659195979a5",
+    "upstreamSha256": "4a258c80eb26f4e93b0d80e470ea690d485cf4c0bb35300a693eea25182d9b15",
+    "upstreamTokenSha256": "517a2a640dec740ce08c3678eaa0e98bed89bc7268ce06f87586ea3b34da80c9"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "acb5a9b010a7e4db3a724c0023f6d50fb81e746ac2ae52ae2bacb17957cefcae",
+    "upstreamSha256": "68cf79a637995d5ed243c4a5856b42a5e134ee8786a05034e24d75927fc40ebc",
+    "upstreamTokenSha256": "11455f1cba22ebe75da1c4f4812fe66ba5a13fcd7902419c567ca62f8366e61a"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "6923f92595c5878a93235267aab1697cd0fa9ffa7135464f38a4dd5899ad1840",
+    "upstreamSha256": "51fdad936cefb4c63e987e97e516af965fbfca31e1798f380ae16e5b3a6fb3d1",
+    "upstreamTokenSha256": "3e6d321c0ea172fa7edef2a72436539216daa61db08597a9c0888c99dfb950aa"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "f3e8526249e34bafca3942fed184bb00b935f509a67c6cf668169029949a8376",
+    "upstreamSha256": "4e7258db20d558c64d06ad592e80718dd127d9553dc29632e7d73de26d6d2005",
+    "upstreamTokenSha256": "f902b88ee543f7f9e7e9edabcaa65a7541ceca2c531c0566f8ffc0243f930d8d"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/structs/Heap.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "dbd64e67b73cbf261368f8a7a0daad8a9c2e90044303fccb885e83743e0b0381",
+    "upstreamSha256": "d9b945b169c77dd7d941a82e191edb709a31c0fb09e70252c32ec692b3d9c223",
+    "upstreamTokenSha256": "0ea7b8cff774195c50a6017781ba6dfd8724e798f7ffdecb3467f9c0b430a151"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/structs/MerkleTree.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "1de9d3cbefdadd37feda88c2e813c6539a0f5e68a7941e3cf5f87351157d3d35",
+    "upstreamSha256": "547569e45b872344f4be6608ae4c69e074ef0da72e57476f4c17e85056944a9d",
+    "upstreamTokenSha256": "93fe76b4fef6a662a41e73ced57b1d0e9fe2012c9da4d39d00b51d6f359abd02"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/types/Time.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2e510995d02ec09da899f40f9c6200dede5b088160bc788aa3aab97b8fb6161d",
+    "upstreamSha256": "79534431c3934b23eafab9d02bda493cfc2ae383ba117a7c9698750c2e4845f1",
+    "upstreamTokenSha256": "34a77fe0a2c9280a0042ad11116c37ccc869d4f15ad3507b08fc80f73d820e45"
+  },
+  "lib/v4-core/src/ERC6909.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "384859bd5d526bb84cba7d4c59191e05f2fa814ad901aab70c12486983894583",
+    "upstreamSha256": "0f1bf94844851b561ae53d57263366d18f4c4431eb47096871e8715837c6ec9d",
+    "upstreamTokenSha256": "66f73f90e5c221b74d11ca35efda1c769a1d24ddfd1d5bc47ad772b44c9553b7"
+  },
+  "lib/v4-core/src/PoolManager.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "14171e430ed164179d25fc1ec5edcd5d6e8b9b1f548b84d8197e351aa99e11bb",
+    "upstreamSha256": "6b0327ec5427acf894865003425eed18fc09a70389f785d4c1c05541133f1012",
+    "upstreamTokenSha256": "61340a50a1d91107ee0f813edb7e83638b3673834a588fedbc29b981bb64357e",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/v4-core/src/interfaces/IHooks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "35001fb3021d81e76135fc60882d182fe24ebb7bf0d71646c7d530863f04196b",
+    "upstreamSha256": "aca1db9898026d9a4b8740752fb0dbfc6a55e4bede6a949c6af4e07d626f6900",
+    "upstreamTokenSha256": "5eb9792728b4584c1cdcc790dd8890913999f3320866c6a0c4bfcec138d92fba"
+  },
+  "lib/v4-core/src/interfaces/IPoolManager.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3857988ff1c78d08084d73c13b6734b2847703db18e99e8f74c790bb59453cc5",
+    "upstreamSha256": "173a3f93aeb39373271ebe2bfb961d824922378a39b7a5e983acbb1c122d296e",
+    "upstreamTokenSha256": "038452e5835e500cc0ed015ddfe8054538503dd2f3bd7ff90db08745d34f7dcb"
+  },
+  "lib/v4-core/src/interfaces/external/IERC6909Claims.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d7a5bf4d4a9f1ea612b17d26ed63c737a1d060eed1fb051f7caa632df8309218",
+    "upstreamSha256": "1cd65496c829036bc6aee67bc71363ab5fb6989c65e793087d0e1e2379f7d7d8",
+    "upstreamTokenSha256": "450e396e95773c4bd2221acd5b00f434436b842692983eebae763737140bde8e"
+  },
+  "lib/v4-core/src/libraries/CustomRevert.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "30f9bda5ba65acab8f310ad2bd41153f0aa9b87c9750e6131982eea6cfd5de09",
+    "upstreamSha256": "9d3dbe6b742cb1ac30f57df89d879ade9649389de1165fc637114bd062d39fca",
+    "upstreamTokenSha256": "80d66164e4c3282211397c698984507d2cddcdf4b347542b1280e51d0408542a"
+  },
+  "lib/v4-core/src/libraries/FullMath.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "0e8ca1bc98186b33f757083407205148bd3972f88209111d9abee22ab8c3a818",
+    "upstreamSha256": "a9607255a6fd604d9c92f6b7416811c38b9d86e5dfdb0c345a494ebd35f7a4a3",
+    "upstreamTokenSha256": "57a326d5f1c164e32efa6bf96e9af95e4532d41e4a1a99e88e400d5dbedeecd3"
+  },
+  "lib/v4-core/src/libraries/Hooks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "715d75b59ffaa5c88644808d8f4aedb2298104bddc01930c0565a2023db177b4",
+    "upstreamSha256": "f6012d7f627259f8f32816ee8e10b1d6244067c602a178072732bcaa32086b17",
+    "upstreamTokenSha256": "d5500b76f9cc866a4bea89b0c17c77f87a48c67f527adf673d95edf15e102869",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/v4-core/src/libraries/Lock.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "1c714f83921526c1cafe978d97b34e1d92c8cc8a51468abd99d8b2702f3c0c5c",
+    "upstreamSha256": "29cd41a53de22514164e638e7bc965ccf4d9f34b455b43a1a15e06a8cb86e7f1",
+    "upstreamTokenSha256": "257ccd7a2a147288fcf4d22569bfdfb17e811bd37ca12c4f75f811779c285513"
+  },
+  "lib/v4-core/src/libraries/Pool.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d6234cb63b5aa9511ae99885fdbab0832190dc96148bacb5db4f34c7ea28cd0b",
+    "upstreamSha256": "59c493035ad25d56f24a457e8b40d9d1e3784504b8ff13d171db1eb25c6f128e",
+    "upstreamTokenSha256": "d7efacf47ed967892249499d591e8f606933a44cd37b13fd3f981fb4ccb51fa1"
+  },
+  "lib/v4-core/src/libraries/Position.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d4064231f17ddcf36fe644b251d50eaca2a839d8bcce2c2eae6b587271b117d4",
+    "upstreamSha256": "3dc4e2ad1564fa94eddf3ff06ce9ac592c9d578ea64ca194050382da454c8fcb",
+    "upstreamTokenSha256": "bd930b5c3435584b9182fd38a8683095ba4725c2001e1971e8ad1f8f2b4a3fa6"
+  },
+  "lib/v4-core/src/libraries/SqrtPriceMath.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "89e61ba0d91f1a2309072c3e56887fcd5020991dc6f6883ff589cf911dce9760",
+    "upstreamSha256": "42440c21bbab86c7eed4716b281ed5ca281cf14af8b5e06dc6dc3bc6864bcfdf",
+    "upstreamTokenSha256": "d2dd34713400e6a62b97354abd24e6073a98cf200009f9d9c7487fd691e0ba98",
+    "upstreamZlibBase64": "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"
+  },
+  "lib/v4-core/src/libraries/StateLibrary.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8c26df2b2db36cd6c2cde78aa20c236c2653148fddc2c97471c01ae91e5728e8",
+    "upstreamSha256": "eebdbc1b6e431072ce5521b9e1b603d43831e3b6e062743e6665e070d5cf8a1a",
+    "upstreamTokenSha256": "44c5b7501895080071adeb6743a5e251dc0c6a7d121fc22536ddfc5942fe2d55"
+  },
+  "lib/v4-core/src/libraries/SwapMath.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "399a3938c17c904af3addce4d177173ce83efe0e799422761fb6c343c05ba1ed",
+    "upstreamSha256": "eb3971ea0ba84ff0a01f2fbe43f62f9c393121ef1724774ed3f3ab7760780e4a",
+    "upstreamTokenSha256": "0490d565e6376f62bf83856f65768790716edd50820ecd3c070c87a919a938cc"
+  },
+  "lib/v4-core/src/libraries/TickBitmap.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "675cb9b96f83bac986ef9b631f557676730181f2d689c70ff8d5b914cc0506c2",
+    "upstreamSha256": "19b25dccfac8bd90f9d615fb182547eb7b5908a5cbf21a1c5920b92c47383cb6",
+    "upstreamTokenSha256": "cc18e928f544941b825a67ff1b9e0e55a5d6ab7cdab4d16103bf180bf3cc4d9c"
+  },
+  "lib/v4-core/src/libraries/TickMath.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "9bd68eb7e77712f6409d220058f60e07edcabb563bab8e10db3027efc18216ac",
+    "upstreamSha256": "272d4f6d3ff9ae33596ebcdb84a71a3c2d4542ae8fb5c88ddf1aca8043f5d06b",
+    "upstreamTokenSha256": "097dd260ac2d069fda9638e4c7aed6ee41f6ac2686b76c52bb30c3b6962bb8c1"
+  },
+  "lib/v4-core/src/libraries/TransientStateLibrary.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "f5979286451618bc2ea077664a5e35df1db8996a7c4b546576943df12941b803",
+    "upstreamSha256": "9835fca9df8b3f649def66835c5d7ee68de6a6cbe92bf255eb5d8b92a6a8d60e",
+    "upstreamTokenSha256": "d05c035ff8250272568ca8b9d38d51b38d4d2653ec9586a16a8da8ad0b6356e8"
+  },
+  "lib/v4-core/src/test/ActionsRouter.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "b7f69c0bd29898d3fde62cc1a55016f656fd497183dfdc223547b02d118fae89",
+    "upstreamSha256": "b3a0e95010e4d7051b7579c81821addc1d81279a05ca5b6bcf136a93e8acc478",
+    "upstreamTokenSha256": "e37159e5bb323940f659c90c0f1c40001a3886c7956e31c453d34bcd64f42f03"
+  },
+  "lib/v4-core/src/test/BaseTestHooks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "51e70fe4a6b6aac20e97179232bfa6c7438a22a6832f77f594281e3eebdc445c",
+    "upstreamSha256": "19d0089ebaed043cb2e3aaff8f8399d405ba65562ce78f0b0fc2dd37c150e736",
+    "upstreamTokenSha256": "7aa9c16be711c9ffa9e1e1d7bd3d514e629f689d40ada6263c187f845ce92a04"
+  },
+  "lib/v4-core/src/test/CustomCurveHook.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "230195a80c01a7008d576f3d57633cc5bd9c30f7f47442590585fddcdb743839",
+    "upstreamSha256": "9f45571cc7ca56b2056b150dd699ce13838d82bb08f15b2ffbe5f37d998074c4",
+    "upstreamTokenSha256": "1ef5ed027ea4389036afd0cc12306478cf013571f241aefc84f6d64983f4c12e"
+  },
+  "lib/v4-core/src/test/DynamicFeesTestHook.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "c88cb4d3e856998f67c564ad207f1af2b11285de10bac332f54a8d49c80bae7c",
+    "upstreamSha256": "e466499e946e8358e44296d4fdc8b0796ff2300ad3466efb5cae32d9e2a8c05f",
+    "upstreamTokenSha256": "ff6338487c1316a51a0dd088248ae1aaf0cc5bf86dfd1de4b88e93c0b7688dba"
+  },
+  "lib/v4-core/src/test/DynamicReturnFeeTestHook.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "365619f4db28abe7bd0863c69a9decc0adbc58410ef18138fdd069ccbf07bceb",
+    "upstreamSha256": "1fef971ee19c6dfcbce601beef0bf145708fc2369acc46cc0c4eddaf358ef634",
+    "upstreamTokenSha256": "3b5710e79d5b610a87fba528cea2ce0bc26e3f26f694c14eacf88874e69cf04a"
+  },
+  "lib/v4-core/src/test/EmptyTestHooks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2b404aa313ecd360ff106bb5704e6d0cb0689e6a6c5cc69fc5cc9e143b8a34f9",
+    "upstreamSha256": "ed8059a1bec0459ef8d2955b454fdbd185d1de9e044de089ac74e39a7e6d5472",
+    "upstreamTokenSha256": "28e51fc4a9c5cd154ef8bde5fd05e3cfe7571874df24183f67089da9d86a1140"
+  },
+  "lib/v4-core/src/test/Fuzzers.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "bea624d6934e39dd1299c3e6fa4ededdd22b3320e81c3a5a7659c400e562f60a",
+    "upstreamSha256": "941e7809a4f595c49f3fe7d494569087772f8402ee0ae8450fa09d549bb1d3dc",
+    "upstreamTokenSha256": "664ff54b441af9858b7ca27b46fa91ffa99ec183468ce5404e80d05c5e812b22"
+  },
+  "lib/v4-core/src/test/MockHooks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3055cc244b5d300b36c14d9a0942aa6f9aed50848590d3ff13dad10ebcf84121",
+    "upstreamSha256": "e380fdad38bd54f100c5123112e5a6e66da11e39a633d39379e89d5887a9f05f",
+    "upstreamTokenSha256": "47b81336e2fbe550a82c0cb55bca700248723b7bea8c300337ab9ce816a72737"
+  },
+  "lib/v4-core/src/test/PoolDonateTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "553e846fc43227b0988339085f41f35fe35b83bbfed08181f6594af62828434a",
+    "upstreamSha256": "d78aeca9df8d49c621d5f0dfba8637174a1dd36e9d7daed97fc65ecf2083369a",
+    "upstreamTokenSha256": "c0ad8c10d3eb8be713e2e109167903ee10dfc19c2267333825d5c9dc946b0d26"
+  },
+  "lib/v4-core/src/test/PoolModifyLiquidityTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "78fac0a88f202be64c167e0843cb6e644193f815d56229530b90a98229251050",
+    "upstreamSha256": "f2f2e31ff699800706afabe0b2179d6f23042b9df6e838de29429617a1d90590",
+    "upstreamTokenSha256": "e2ddbf1818f146967cbb97c5c281a77d60e8f79e329b00aa2be29f936198ecea",
+    "upstreamZlibBase64": "eNrNVltv2zYUfvevOMuThCmyXWxDMbcBmjjDjHqtUS/AsIcFNEU5hGXRIyl0Rpr/XlKkJJKSnWZP1YMvh+f2fedCjcewXs3/ulxSTEpBLhcZKSXNKeG/wt2H5eLm9sP6dj46cLTdIxCsoBmVR/hnkr5OX/00G43o/sC4hMebinNS4uOSbjjixwQawRPknO3hIk3H8nggYtwcpMrbxax1sFgxVvyBSrQl3LGhpSQ8R1gZuhqB8TUqUInJnBQS9QK6h4Gd9vie9HO08gHtP4mQ10iQ1mTsSkNMvzO2EyfQ1GeBQahf1GxSpT6kvVz9RoglfNDIVQhsmyqsiZSFx7gmQcEZV5IWXbWsXuBlLZE8m4GrYG1HmJWSIyyhrifLaK665t+q7ixNJFABLqnwOAL1VIKWWwjygZzxVjZz9Gq+6lNDtHvm0lKrVKouups7FTdv48VpPoVBayocQvIKS8Yj9xju9+ZH7MGIOvHjk/FgzOEGFcUG4d0cSWTB6gdlGSdCgCBlpoM2ctucsCPHTugNR0DqCnG0F3CovzqTzVHVGR4UOzqwI1eeVFDN750m47riZXAq0Y7cFIg27iyevCqxpKyEvZ9A1Mt9T/aM1xCSl0CwZgZJEiCxhw2g+jQG8p8auRIVyuiINgUBTqQCJCBy9wJk+jN22K8F8LYHRafcJNDGSiBHhSD2K/5+SUnOVjk5VWXL5aHaFBT/XybRhqYZwSwjHXT92LFIq7JgeBdpNTXNWs0djGgvtqkZhQROFCGE4yCI4zjxonpJx+1RbIe7XgV6Lfz8CxD5YJU1CjOVkXygIk43Rt6NB80hcvSvYOJSoZ/gpkzfzeefbtfr+79vP31M1WIsRU64h7bzF3eBngZ7zHDY8BaZHsDqb6Z3C0efNVHOULQldLvFzZgT1WycOPnA246EZqO5rHnbzLZfHd3rAJtKAl6RPUeR5n/66jUUTcNfE7WKSZLEei5t12yJXDFBNfpFmTO/tXTcVDVLKtkii+LEr15izk0fpZLi3ZJ91oSH4rvDIRQLVMjBphkYBi/fcAs0KXru7Z+ms8+z8i5XxfzOSUkSsMNUMzLRyd7nROKms0VLRIrtgEys82YMvDSdSQidT7/F+fQZ570B8Cg0JYiCxozhR4+O9tj0gpqb0K4unaL8opUAfkDllihNzFSmWF4MEqrXzJlQb/prBwlBuIwM/XovwZcvlq96S82GtH9o9N94+tq9u4qAqFvvuZyunsupH+N8Tn0M3nr0uWpDxNBvtNRcHM06C1rDXgPRpW3d9ti7bOJZP+D0RMDpSwJOXxBwYlgeQKhvwmfC+fCcq3MQ2dUJZN8aaDoYyBk7fTGB8zJg3iuaV6un0VffGK32"
+  },
+  "lib/v4-core/src/test/PoolModifyLiquidityTestNoChecks.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "62b286d5c755b82ca235f087f25b5484b1d634828282c07389de59d1495a2b59",
+    "upstreamSha256": "eea606a2f49dc2114e4e762f92c1182e60fc369dfb96283fcc4bb8b47468af38",
+    "upstreamTokenSha256": "3de3f9290ed7ed63f11aeb4fdd5a0831f2de9044530cbbe5bda360547fcf89e5",
+    "upstreamZlibBase64": "eNrNVV1v0zAUfe+vuNpTImVpiwAhyiaxtoiJMaqVSYgHJje5aa0mcbEdQTX1v2M7TuKkKTCeyEObXt+vc+657nAIy8Xsy/kNjTAXeH4dYy5pQpG/hvvbm+vp/HY5nw12nKwzAoKlNKZyD99G4avw2fPJYECzHeMSHqcF55hH+xu64oTvA6gMB0g4y+AsDIdyv0MxrA5Cle1sUie4XjCWfiQ5WSN3YmgukSckUoGuRyf4iqQkj3CGqSRHBd3DTpzO+AGPe7T2Hu/PKOQVEViHDF1rF9N7xrbiBBpz1gno+qeGTarc+7xvFu8QLeG9Qa5DJ7aawhKlTFuMaxIUnGEhadpMy/rZLIOI5ZKTSIKZCYtpoib/vTDq0GTcsukGo60AKsAlCB4HoJ5C0HwNndyQMF7bJo6fwW5OS9LcMxeicSkUx0aZ2ke1KSQvIsm458oHHrLyxW915zXmx0OZoQyHKUnTFYm2MyKJxaAfEscchQCBeYx8UtutfmCL+8bY0m+HswXhJBOwM19NyGqvRgEbBVoXduwqkyqqabvXNFwVPO+cSrLFaUpolc7iSYo8kpTlkLUb8I56zzBj3EAIngLBhpVIgg4Se1gBMqc+4E+1FTlJVdCerFIEjlIBEuC5qwux/vQd9o0BLo6g6JarBupaASQkFWi//P+XlOC3Uw5OTdlyuStWKY3+lUmyomGMEYuxga4fuxZhkacs2nraTS2pdnMXw8vEOixXIYATQ+jCcRD4vh+0qraa9usj3y63uQT0tr94CSg31lmjKLfSkxsq/HBV2pv1oAl4jv8ljFwq9NP5MwvfzmZ38+Xy4ev87lOo7r1cJMhbaJt8flPo0KuxksOKN6/UQKR+xvpu4eSHJspZinqErlrcjjkqsXF0+oGLhoTqRnNZa91mVn6meksBtpUAWkNuJeqRVeDrjbR66e6TLhIaZZi3Sh7mR6URN7+drkk8UnnNS0gyVuRy5DlUu47jjuPYa6VU07f53ujJVy2FkR36KCw1WjFn26smbRXnnZdJ/Pq4pWt/clxwfKLg+CkFx08oOCq13YNQL90fyrXhOVvai+zyBLK/LTTuLeRIXO8AOPdOeYVVt/hh8As5xnp0"
+  },
+  "lib/v4-core/src/test/PoolNestedActionsTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "a9521237ae33e5875b25305af0290caeecfd3c4e80861d78f1f25a513b7811d4",
+    "upstreamSha256": "f47549121086c8a39b9493dcafe76b127df1cf4764e124edcb831b0ed4e6b077",
+    "upstreamTokenSha256": "86ffd4142a29b6d3e6d03bcea60db1db43ccd1183fedbe6a8682270813143f73"
+  },
+  "lib/v4-core/src/test/PoolSwapTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "2b9cce94357bad598c76f09d3d220ce5be1fd5360e892a09faf09dd4f95be3c4",
+    "upstreamSha256": "f6bcbae53e11da5fc95ca172d2711c69a2c26bc4292a199fec5aac7fb907c753",
+    "upstreamTokenSha256": "7ba300542b968c61a839ab67993bc0a2208272a8ed8146451fee9fb409ac50ae"
+  },
+  "lib/v4-core/src/test/PoolTakeTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "37b6800a1467f992fb6da97eac672a285e2b9e7ef9953c465f2d3493f9ca0e26",
+    "upstreamSha256": "7caed276fff2011a310a5ea4f56f491a1617b714c05c0846ba15cff079efca35",
+    "upstreamTokenSha256": "29c475f882d6a5fca07025e7611d78c9a6a023458cf2af050fe6fd4bac681157"
+  },
+  "lib/v4-core/src/test/ProxyPoolManager.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion; forge fmt also wrapped single-statement branches in braces, so the pinned upstream bytes are embedded for exact reproduction",
+    "formattedSha256": "9acf095c2c2ad89f260568a1275c3e1c55bd93a06369b551b4d8cd6b819f989e",
+    "upstreamSha256": "87851913f2d6e2a3c6622993396d9c6cd7a0b59494dc2553c64a6bd208644715",
+    "upstreamTokenSha256": "fe6e7d6cd760d9a45b9f4307fb9ca4053b4f47490e645f4bd50bfd2aa4df834a",
+    "upstreamZlibBase64": "eNrNGV1zG7fxXb8CzkvJzpmS3MRTx5Wnspy0nEiWxpQbTzutBrxbihjdHWgAJ5lx9N+zC9wHgDtaEq025YNEAruL/d7FYneXzc7efHh6LFIoNTydZlAasRCgvmev38+On+5P9ndWil8WnGmZi0yYNfvP3uTPk2ffvtzZEcVKKsM+/13KK33LFkoW7JvJZDcXc8WVAL1rdyaI+s3LFvpMynwQmDYi2BlfwBHXZhC+2ezR18IIWW44w21GOMdnPwIcW6j1IJ4PEOEeVUpBmfp4Zr1CnGZjQP6foA9er0fQ5yK9OuFmOchVsxnhvJVvIIdLblA9ua/rcCPCmsZmFKUBteApHjQdMuSUOD7hJb8EtQHNg4iR35e5TK+IjzlPr4bx03p3N4KONaqkkanM0UQ+//5yhPHDu6PnL/ZeHOVcFD5KsD5gt2k2aLZpFsG+5jkvU0BtG97D8DdjP5SBKjz/kz2pG/eKD+mQAoiej5S/gJJ260hW5XCI9aA28PAONKhr0F9kowGKbfHJ6FxyX7PNUh/S9CHNAORRpY0s3sE1KLOBpw6gxt3Z3d1lfy2lwWTIDtlKyU9rtkLrssJ5MDNLblhWR5Bm5J2aGYnrwBTwfLfZC9B2UlkaxVPDzoikFxJMaOaHSMJ8l01YGK4JC7wTf9Zast+sFtjnHYafSovykjXpkS2kYn986e3Qkf1VG+J22UW7vxd4koVpVnwoP0laoApjmSpFn1DjCxtp+QayQPM16pyqDsFYumgicU3aRgVrw0vDTg4/XJxPj366mJ0dHk3f/o0dsDZFxnt3UJq+3Uwp2qspFXy1Qs5HLiEwkbGDV1bVk5lB2mNmE1vJc3ZB7qFrNJ5lCrTudkVRVIbPc2AXjT/V/lFjWCZVlRqpRg12BDkOPGlU6MuJhjKjDeci9InJo4y9Awnu1h3rh8f5El33RuQ5+r21kFjYKGhdHbcpYUPmVCMz21UwWebrn5dQunQO2cjnB2mMnthEJ3QHMGY1M8d2AeXIgUSfuJN/FmY5Gr/shOrzLMolKGEymQbRZgEWVZlSP8Aqe+DIepmN7Iyjp9OfMYNPtWnKICBRdlOpUrMaq4BCouOjParcxIINyHWYY9LI1s3SJslaMpZEzae/jjJa3SNLqOJMIitEYG2WFEiixF3hZKLameBKmlcZ7a34mv7dUF5DEmsmb4BdC96lNg2YWaA9ysmGjhIVZN/DahbbLatDj13SRr+ukCrQG54csL1xmxDeSjOzDNxpdqubRjNbOYAosTHkufgFRnUn1hj0CtaJTWX7z/eY/qjMmcIY+PDi+T08w6UXjJkr3yGQKQ1gM8prYTBxUAmyWU6icItc3lAkZbZT1a7spLxkWLo0uGpGFJle8ZTsNwf6a6RkOVeXEGgamZ8Q8KyGfdVLkmPLR71/LuUx0RjUd0TLU//QSX/pJdH4pFlhu9CtTkprF9ljrw6Yv7DvK5o+tTNh1T+tzOniVKGTnqofPlZ8+OwA2SOwRse+UXwVHj9Ovri/Pw7IeYLchnmPkJa2yRb6H+iGGdXgQ5fdLcUFAOYM14d7exgiFnxQFO7hW+JjPxBddWb5CmsEc0rEQyaXYKYuFmw9D1JNx+Uc0F1h2gWNjZIgOjw8ryZaGkZOs4Cw9eeDujL+S2T/nnjx6FNNHL/DTPEFhuOXeEpcKIbJEwphGEVtBoYLzHtywbhr4Yi0/YZfNMYfYKAbpvk1ZJRYsUXByzEwXmaswIYFqdxwBJwDtY/XIkOw+drLznHORrJ/wB4I9V/wNaHhPRubBZHaNcwH+Juu5CXklI3xei4NAWXrkhcOatLStHJ40gvsDANfDX/uJ43J3Rcv3pJOpxv0t1WKtW3A+lh8rOwkYRS4R5Rw273gDnkSUjjjihdt4V3ZXx1mVMtJnDf4xe57qTvuSTbmcv/eVtvTfk9YsIMK1YdpqirI/FQ00COQw2feUWHqiduzhPG5mKDlZAYU3bM64EdU3ieRbtt0kLjyVeumVUKXlvxgcKLaczKgc0aO0SQUPhR4vK076BtMlkO1NjD5DKEG7bzJvp1ojYnbhdjU7UZo8kgfsemJbye5BbzDxMM2teZ+mIXp2DvNuoU1t7ZfJkvkfWO39Oy754wX1NztxQv7v5/xsnsb7vFi0ykqtl2rm1YnjxKc24fjukxHTS/DmioxZqtqnmOpCbrXprHAXh2vFpXGrEndK5U0FFVcQ4sfdDnNIvY4dfvyT7wF0F0obNnwhHM7U6mHBHMnH51F9bc9rz7LXlJs2dKS4Q2GPIWVgEBYM4mIcSW4OX2oPeymUxahWfXvGLcMcuy/Q1Ybx25YPOiOqZdOF+gNC5/Q4LGk/mbxsMya9VZnSXNEr4d8sKUNv4K+pZN2FGFkHLAPKJcD84Utkh2x6AVMxyPxVvO0taPbK+XIkwnvwXbgcu9WoNHOiosHF/kHZn3LbKuK+yb4msGv1NGP3oRJQSpWAgJf+O/q7fEqZyOM51GdOP8jjaY5cDUUdfePtMcJLcvIYGx9ZVwVKMhoKIfQReR3zifEmyczcUdcfaXEc3SWVmKay/xfyUzceTI7/h5B6mqFLRu8cVdQNyPY2AN+i3X4xgf1tPC5PwGh+6zQNbwdPrBff2XdcJHmgwNDjagmvy95ZZZS4SU4889+bxm/a5TYDWYi1ifXNGihlteD3jTZaA3YTTQwDTltxSrZOGY/wSrIeDuVt+0y9gHVnJJutWK8XDNQiuaGqsld7jGKklZotdCT2jClYZ9JwgTspt7tg8R9x9yjOY1MdJWmSDmJczrRsM0tKsqdOmk4IrEGx8RPamKxgWmvozjJobw0S3ZgZ8efe/M7Z+a4ARvs5uyDjNZQzLGD7G/RJ8duUqNnse8PWEGPbh4n40GM+nxU+ehPzxJfFYml1Me63Rn+ddurVB2xjU40LVY5FFjpuPUD6V5qLtAA7h2wvc7BQpRuruU/HkVeVKN1r1yeo1wLuLETbCUy6NymewNrBma+lWpBujh5qCDdo8pDZfGfY+6Ugpx7gO/eu07D/u3Ob1mYj/U="
+  },
+  "lib/v4-core/src/test/SkipCallsTestHook.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "d3536d0af633ac0cb86b3a3682817dce67c9cd79df9393720b98b5784cce154f",
+    "upstreamSha256": "89c7626c664b2ec6a846257e916f47897e59acb55f588dc27548885c2e7c80a5",
+    "upstreamTokenSha256": "fbdcb21feebf7f3db1291ea33915fcdd4a3c96f9f0154b6834afc9d766b25219"
+  },
+  "lib/v4-core/src/test/SqrtPriceMathEchidnaTest.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "4f71ad9d7540f0408ac08a5ec15e7e3736c28b202eba0394ba5bb99bc2eec5ac",
+    "upstreamSha256": "f1f5fed730f6f363cd8cabf0bb8f0955d11476175f9eeeed643beb752f54cb3e",
+    "upstreamTokenSha256": "3874ba7177ef85edee0f9fde623d50e0927a082b24c95efa92fe7e8d6eef859f"
+  },
+  "lib/v4-core/src/test/TestERC20.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "8451680cb19114f816f02f83f3693d5fd78b66a9367672bdc08609a855e1a1b7",
+    "upstreamSha256": "13fb407f26cac7913fefdb1804809ff2cd84d69c39d68ff02810016e9dd94699",
+    "upstreamTokenSha256": "0f33e584ad8a67783e8b4bcbd69b0d83ae776afa4a1bd663d34d0778e1b2114b"
+  },
+  "lib/v4-core/src/test/TestInvalidERC20.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "4de242bdb86d0fe2336fd15f4215070014f6ebb2cd742341f027a667baa440c8",
+    "upstreamSha256": "d0dad399a898ec1df9f580c1e698e7574f5d0e8bc2050b73efe9be109d765636",
+    "upstreamTokenSha256": "8137e0a916955d1b861e5620e47e9e3710782007b3701cd64d8c20f51845bf11"
+  },
+  "lib/v4-core/src/types/Currency.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "7297e2bb4bacc2883838876d929a83199a236e233a72ddad03d457256c623041",
+    "upstreamSha256": "ba6726fd24fbc66848208dfbb2899116c10729c505e6e5552316ac2444f1dfc3",
+    "upstreamTokenSha256": "2166483fc8b2bab253b75f6cbfed082a73094c2b2e5d047167a66e35507ac566"
+  },
+  "lib/v4-core/src/types/Slot0.sol": {
+    "cause": "forge fmt 1.8.3 post-publication formatting pass; foundry.toml [fmt] has no lib exclusion",
+    "formattedSha256": "3726b242f1148204d77b21de3e69ad62757b0cb652ace183bb4174e9f923f717",
+    "upstreamSha256": "378b45486644dc7e49726358e83d0e2fffdaee088d18cac1a3df00d02c3635b4",
+    "upstreamTokenSha256": "c14db0aa7fcfdd301bacb26373faaacd250443ea78f416758510767848459bcc"
+  }
+}
